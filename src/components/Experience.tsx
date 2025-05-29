@@ -1,7 +1,7 @@
 
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -32,7 +32,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -41,15 +41,15 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title">
-            Minha Experiência
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title-subtle">
+            Minha <span className="text-blue-400">Experiência</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Minha trajetória profissional, trabalhando em projetos desafiadores e impactantes.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -59,35 +59,36 @@ const Experience = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              {/* Timeline Icon */}
-              <div className="flex flex-col items-center mr-8">
+              {/* Left side - Date and location */}
+              <div className="flex flex-col items-center mr-8 min-w-[200px]">
                 <motion.div 
-                  className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mb-4 shadow-lg"
+                  className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white mb-4 shadow-lg"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  {exp.icon}
+                  <Calendar size={24} />
                 </motion.div>
-                {index !== experiences.length - 1 && (
-                  <div className="w-0.5 h-24 bg-gradient-to-b from-blue-500 to-cyan-500"></div>
-                )}
-                <div className="text-center mt-2">
-                  <div className="text-cyan-400 font-semibold text-sm">{exp.period}</div>
-                  <div className="text-gray-400 text-xs mt-1">{exp.location}</div>
+                
+                <div className="text-center">
+                  <div className="text-blue-400 font-bold text-lg mb-1">{exp.period}</div>
+                  <div className="text-gray-400 text-sm">{exp.location}</div>
                 </div>
+                
+                {index !== experiences.length - 1 && (
+                  <div className="w-0.5 h-32 bg-blue-500 mt-8"></div>
+                )}
               </div>
 
-              {/* Content Card */}
-              <Card className="timeline-card flex-1 p-6">
-                <div className="flex items-start justify-between mb-4">
+              {/* Right side - Content Card */}
+              <Card className="sophisticated-card flex-1 p-8 bg-gray-900/80 border border-gray-700 rounded-3xl">
+                <div className="flex items-start mb-6">
+                  <div className="w-8 h-8 bg-blue-500 rounded-lg rotate-45 mr-4 mt-1 flex-shrink-0"></div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-1">{exp.company}</h3>
-                    <h4 className="text-lg font-semibold silver-title">
-                      {exp.position}
-                    </h4>
+                    <h3 className="text-2xl font-bold text-white mb-2">{exp.position}</h3>
+                    <h4 className="text-lg text-gray-300 mb-4">{exp.company}</h4>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                <p className="text-gray-300 leading-relaxed text-lg">{exp.description}</p>
               </Card>
             </motion.div>
           ))}
@@ -100,7 +101,7 @@ const Experience = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <button className="sophisticated-card px-8 py-3 text-gray-300 hover:text-white transition-all duration-300">
+          <button className="bg-gray-800 hover:bg-gray-700 border border-gray-600 px-8 py-3 rounded-full text-gray-300 hover:text-white transition-all duration-300">
             Ver currículo completo
           </button>
         </motion.div>
