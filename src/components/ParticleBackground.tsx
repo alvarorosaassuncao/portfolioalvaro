@@ -40,7 +40,7 @@ const ParticleBackground = () => {
           speedX: (Math.random() - 0.5) * 0.5,
           speedY: (Math.random() - 0.5) * 0.5,
           opacity: Math.random() * 0.8 + 0.2,
-          color: Math.random() > 0.7 ? '#60a5fa' : Math.random() > 0.4 ? '#a855f7' : '#06b6d4'
+          color: Math.random() > 0.6 ? '#3b82f6' : Math.random() > 0.3 ? '#06b6d4' : '#c0c0c0'
         });
       }
     };
@@ -60,6 +60,14 @@ const ParticleBackground = () => {
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
+
+        // Add glow effect for blue particles
+        if (particle.color === '#3b82f6') {
+          ctx.shadowColor = '#3b82f6';
+          ctx.shadowBlur = 10;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        }
       });
 
       animationFrameId = requestAnimationFrame(animateParticles);

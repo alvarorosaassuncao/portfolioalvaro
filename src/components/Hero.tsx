@@ -1,5 +1,5 @@
 
-import { ArrowDown, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import ParticleBackground from './ParticleBackground';
@@ -10,7 +10,7 @@ const Hero = () => {
       <ParticleBackground />
       
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/30 to-blue-900/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900/50 to-blue-900/30"></div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.div
@@ -35,7 +35,7 @@ const Hero = () => {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Álvaro Silva Rosa
             </span>
           </motion.h1>
@@ -69,14 +69,14 @@ const Hero = () => {
             transition={{ delay: 1 }}
           >
             <Button 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 shadow-lg"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Ver Projetos
             </Button>
             <Button 
               variant="outline" 
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-4 px-8 rounded-full text-lg font-semibold transition-all duration-300"
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-4 px-8 rounded-full text-lg font-semibold transition-all duration-300 bg-transparent"
             >
               Contato
             </Button>

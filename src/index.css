@@ -11,7 +11,7 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 16 88% 50%;
+    --primary: 217 91% 60%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -26,7 +26,7 @@
     --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
@@ -42,9 +42,11 @@
 
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.1) 0%, transparent 50%), 
-                linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #1a1a2e 75%, #0f0f23 100%);
-    background-size: 100% 100%, 400% 400%;
+    background: 
+      radial-gradient(ellipse at top, rgba(59, 130, 246, 0.15) 0%, transparent 50%), 
+      radial-gradient(ellipse at bottom, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, #000000 0%, #0f0f0f 25%, #1a1a1a 50%, #0f0f0f 75%, #000000 100%);
+    background-size: 100% 100%, 100% 100%, 400% 400%;
     animation: gradientShift 20s ease infinite;
     min-height: 100vh;
     overflow-x: hidden;
@@ -56,15 +58,15 @@
 
   @keyframes gradientShift {
     0%, 100% {
-      background-position: 0% 50%, 0% 50%;
+      background-position: 0% 50%, 0% 50%, 0% 50%;
     }
     50% {
-      background-position: 100% 50%, 100% 50%;
+      background-position: 100% 50%, 100% 50%, 100% 50%;
     }
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #06b6d4 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 50%, #60a5fa 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -155,7 +157,7 @@
 
   .hover-lift:hover {
     transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
   }
 
   /* Card Animations */
@@ -171,7 +173,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
@@ -184,7 +186,7 @@
   /* Backdrop Blur Enhancements */
   .backdrop-blur-custom {
     backdrop-filter: blur(10px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.125);
   }
 
@@ -212,7 +214,7 @@
   /* Enhanced typing effect */
   .typewriter {
     overflow: hidden;
-    border-right: 3px solid #60a5fa;
+    border-right: 3px solid #3b82f6;
     white-space: nowrap;
     animation: typewriter 4s steps(40, end), blinkCaret 0.8s step-end infinite;
   }
@@ -231,12 +233,38 @@
       border-color: transparent;
     }
     50% {
-      border-color: #60a5fa;
+      border-color: #3b82f6;
     }
   }
 
   /* Progress bar animation */
   .progress-bar {
     transition: width 1.5s ease-out;
+  }
+
+  /* Silver metallic effects */
+  .silver-gradient {
+    background: linear-gradient(135deg, #c0c0c0 0%, #e5e5e5 25%, #b8b8b8 50%, #d4d4d4 75%, #c0c0c0 100%);
+    background-size: 200% 200%;
+    animation: silverShimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes silverShimmer {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Blue glow effects */
+  .blue-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .blue-glow:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
   }
 }
