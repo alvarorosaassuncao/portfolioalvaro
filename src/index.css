@@ -51,15 +51,26 @@
     scroll-behavior: smooth;
   }
 
-  /* Silver metallic gradient for titles */
+  /* Silver metallic gradient for titles - mais sutil */
   .silver-title {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 15%, #cbd5e1 30%, #94a3b8 45%, #64748b 60%, #475569 75%, #334155 90%, #1e293b 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 20%, #cbd5e1 40%, #94a3b8 60%, #64748b 80%, #475569 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: silverShimmer 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.3));
+    animation: silverShimmer 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 4px rgba(148, 163, 184, 0.2));
+  }
+
+  /* Versão mais sutil do título prateado */
+  .silver-title-subtle {
+    background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 30%, #94a3b8 50%, #64748b 70%, #475569 100%);
+    background-size: 150% 150%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: silverShimmerSubtle 8s ease-in-out infinite;
+    filter: drop-shadow(0 0 2px rgba(148, 163, 184, 0.15));
   }
 
   @keyframes silverShimmer {
@@ -69,6 +80,35 @@
     50% {
       background-position: 100% 50%;
     }
+  }
+
+  @keyframes silverShimmerSubtle {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Contact cards com bordas arredondadas específicas */
+  .contact-card {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9));
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 1px 0 rgba(255, 255, 255, 0.05) inset;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 
+      0 16px 40px rgba(0, 0, 0, 0.4),
+      0 0 20px rgba(59, 130, 246, 0.1);
   }
 
   /* Enhanced card styles */
