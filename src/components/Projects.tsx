@@ -1,3 +1,4 @@
+
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -15,28 +16,25 @@ const Projects = () => {
       subtitle: "MARKETPLACE DA ADIDAS",
       description: "Análise de dados para identificação de tendências de compra, resultando em 20% mais vendas.",
       category: "Ciência de Dados",
-      image: "📊",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
       technologies: ["Python", "Power BI", "SQL", "Excel"],
-      featured: true,
-      logo: "👟"
+      featured: true
     },
     {
       title: "PEDAL PRIME",
       subtitle: "DATA ANALYSIS",
       description: "Criação de toda a pipeline de dados, dashboards e relatórios para identificação de tendências de compra, resultando em 20% mais vendas.",
       category: "Ciência de Dados", 
-      image: "🚴",
-      technologies: ["Python", "SQL", "Excel", "Power BI"],
-      logo: "🚲"
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "SQL", "Excel", "Power BI"]
     },
     {
       title: "ANÁLISE DO CATÁLOGO",
       subtitle: "DA NETFLIX",
       description: "Análise do catálogo de filmes da Netflix, identificação de segmentos de clientes e recomendação de filmes.",
       category: "Ciência de Dados",
-      image: "🎬", 
-      technologies: ["Power BI", "Python", "SQL", "Excel"],
-      logo: "📺"
+      image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Power BI", "Python", "SQL", "Excel"]
     }
   ];
 
@@ -121,22 +119,25 @@ const Projects = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="group"
             >
-              <Card className="sophisticated-card p-8 h-full relative overflow-hidden">
+              <Card className="sophisticated-card h-full relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                 </div>
 
-                {/* Logo/Icon */}
-                <div className="relative z-10 mb-6">
-                  <div className="w-20 h-20 tech-icon-container rounded-3xl flex items-center justify-center text-3xl">
-                    {project.logo}
-                  </div>
+                {/* Project Image */}
+                <div className="relative z-10 mb-6 h-48 rounded-2xl overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 p-6">
                   <div className="mb-4">
                     <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors duration-300">
                       {project.title}

@@ -4,8 +4,34 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send, Linkedin, Github } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:asra.devops@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Nome: ${formData.name}\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <section id="contact" className="bg-gray-900 border-t border-white/5 py-12 relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -36,7 +62,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-300 text-sm">Email</h4>
-                    <p className="text-white font-medium">mattpower.bi@gmail.com</p>
+                    <p className="text-white font-medium">asra.devops@gmail.com</p>
                   </div>
                 </div>
                 
@@ -45,8 +71,8 @@ const Contact = () => {
                     <Phone className="text-gray-300" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-300 text-sm">Whatsapp</h4>
-                    <p className="text-white font-medium">(85) 9 9243-2954</p>
+                    <h4 className="font-medium text-gray-300 text-sm">Telefone</h4>
+                    <p className="text-white font-medium">(32) 99948-2095</p>
                   </div>
                 </div>
                 
@@ -56,7 +82,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-300 text-sm">Localização</h4>
-                    <p className="text-white font-medium">Fortaleza, Ceará</p>
+                    <p className="text-white font-medium">Minas Gerais</p>
                   </div>
                 </div>
               </div>
@@ -70,12 +96,22 @@ const Contact = () => {
                 <h3 className="text-lg font-bold text-white">Redes Sociais</h3>
               </div>
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer">
+                <a 
+                  href="https://www.linkedin.com/in/alvaroassuncao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer"
+                >
                   <Linkedin className="text-gray-300" size={18} />
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer">
+                </a>
+                <a 
+                  href="https://github.com/alvarorosaassuncao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer"
+                >
                   <Github className="text-gray-300" size={18} />
-                </div>
+                </a>
               </div>
             </Card>
           </div>
@@ -89,45 +125,66 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white">Envie uma Mensagem</h3>
               </div>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-400 mb-2">Seu Nome</label>
                     <Input 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       className="bg-gray-800 border-gray-700 focus:border-primary rounded-xl text-white placeholder:text-gray-500"
                       placeholder="João Silva"
+                      required
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-400 mb-2">Seu Email</label>
                     <Input 
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="bg-gray-800 border-gray-700 focus:border-primary rounded-xl text-white placeholder:text-gray-500"
                       placeholder="joao@exemplo.com"
+                      required
                     />
                   </div>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">Assunto</label>
-                  <select className="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:border-primary focus:outline-none">
+                  <select 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-white focus:border-primary focus:outline-none"
+                    required
+                  >
                     <option value="">Selecione um assunto</option>
-                    <option value="trabalho">Oportunidade de Trabalho</option>
-                    <option value="projeto">Projeto</option>
-                    <option value="consultoria">Consultoria</option>
-                    <option value="outros">Outros</option>
+                    <option value="Oportunidade de Trabalho">Oportunidade de Trabalho</option>
+                    <option value="Projeto">Projeto</option>
+                    <option value="Consultoria">Consultoria</option>
+                    <option value="Outros">Outros</option>
                   </select>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">Mensagem</label>
                   <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="bg-gray-800 border-gray-700 focus:border-primary min-h-[120px] rounded-xl text-white placeholder:text-gray-500"
                     placeholder="Sua mensagem aqui..."
+                    required
                   />
                 </div>
                 
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white font-semibold py-3 rounded-xl transition-all duration-300">
+                <Button 
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white font-semibold py-3 rounded-xl transition-all duration-300"
+                >
                   <Send size={20} className="mr-2" />
                   Enviar Mensagem
                 </Button>

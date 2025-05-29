@@ -2,9 +2,15 @@
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import ParticleBackground from './ParticleBackground';
+import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
+  const [showSubtitle, setShowSubtitle] = useState(false);
+  const [showDescription, setShowDescription] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <ParticleBackground />
@@ -28,7 +34,7 @@ const Hero = () => {
             Olá, me chamo
           </motion.p>
 
-          {/* Main Name with Silver Effect */}
+          {/* Main Name with Typewriter Effect */}
           <motion.h1 
             className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4"
             initial={{ scale: 0.5, opacity: 0 }}
@@ -36,51 +42,78 @@ const Hero = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <span className="silver-title">
-              Álvaro Silva Rosa
+              <TypewriterEffect 
+                text="Alvaro " 
+                speed={150}
+                delay={800}
+                onComplete={() => setShowSubtitle(true)}
+              />
+              {showSubtitle && (
+                <span className="text-blue-400">
+                  <TypewriterEffect 
+                    text="Assunção"
+                    speed={150}
+                    onComplete={() => setShowDescription(true)}
+                  />
+                </span>
+              )}
             </span>
           </motion.h1>
           
-          {/* Subtitle with Silver Effect */}
-          <motion.h2 
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 silver-title"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-          >
-            Transformando dados em insights valiosos
-          </motion.h2>
+          {/* Subtitle with Typewriter Effect */}
+          {showDescription && (
+            <motion.h2 
+              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 silver-title"
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <TypewriterEffect 
+                text="Transformando dados em insights valiosos"
+                speed={80}
+                onComplete={() => setShowButtons(true)}
+              />
+            </motion.h2>
+          )}
           
           {/* Description */}
-          <motion.p 
-            className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto"
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            Sou um Engenheiro de Software e Full Stack Developer apaixonado por encontrar padrões e histórias
-            escondidas em conjuntos de dados complexos. Especializado em desenvolvimento web com IA, análise de dados e business intelligence.
-          </motion.p>
+          {showButtons && (
+            <motion.p 
+              className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto"
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <TypewriterEffect 
+                text="Sou um analista de dados apaixonado por encontrar padrões e histórias escondidas em conjuntos de dados complexos. Especializado em visualização de dados, engenharia de dados e business intelligence."
+                speed={50}
+              />
+            </motion.p>
+          )}
 
           {/* CTA Buttons */}
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1 }}
-          >
-            <Button 
-              className="modern-button text-white font-semibold py-4 px-8 text-lg"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+          {showButtons && (
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 2 }}
             >
-              Ver Projetos
-            </Button>
-            <Button 
-              variant="outline" 
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-4 px-8 rounded-full text-lg font-semibold transition-all duration-300 bg-transparent"
-            >
-              Contato
-            </Button>
-          </motion.div>
+              <Button 
+                className="modern-button text-white font-semibold py-4 px-8 text-lg"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Ver Projetos
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-4 px-8 rounded-full text-lg font-semibold transition-all duration-300 bg-transparent"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Contato
+              </Button>
+            </motion.div>
+          )}
         </motion.div>
 
         {/* Scroll Indicator */}
