@@ -1,70 +1,52 @@
 
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState('Todos');
+  
+  const filters = ['Todos', 'Machine Learning', 'Business Intelligence', 'Análise Estatística', 'NLP'];
+  
   const projects = [
     {
-      title: "Plataforma Web com IA Integrada",
-      description: "Desenvolvimento de sistema web completo (Django + LLMs) que utiliza inteligência artificial para análise automatizada de documentos e geração de relatórios inteligentes.",
-      technologies: ["Django", "Python", "OpenAI API", "LangChain", "PostgreSQL", "React"],
-      icon: "🤖",
-      gradient: "from-blue-500 to-purple-600"
+      title: "PEDAL PRIME",
+      description: "Análise de dados de vendas e performance de produtos para otimização de estoque e estratégias de marketing.",
+      category: "Business Intelligence",
+      image: "📊",
+      technologies: ["Python", "Power BI", "SQL"],
+      featured: true
     },
     {
-      title: "Sistema de Web Scraping Automatizado",
-      description: "Desenvolvimento de pipeline Python que extrai dados de múltiplas fontes web, processa via Pandas e alimenta dashboards Power BI em tempo real.",
-      technologies: ["Python", "Beautiful Soup", "Selenium", "Pandas", "Power BI", "MySQL"],
-      icon: "🕷️",
-      gradient: "from-green-500 to-teal-600"
+      title: "Análise de Sentimentos",
+      description: "Modelo de machine learning para análise de sentimentos em redes sociais e feedback de clientes.",
+      category: "NLP", 
+      image: "🧠",
+      technologies: ["Python", "NLTK", "Scikit-learn"]
     },
     {
-      title: "Dashboard Executivo - Petrobras",
-      description: "Criação de painel estratégico consolidando dados operacionais de múltiplas plataformas, resultando em 30% de redução no tempo de tomada de decisão.",
-      technologies: ["Power BI", "SQL Server", "ETL", "DAX", "Power Query"],
-      icon: "📊",
-      gradient: "from-orange-500 to-red-600"
+      title: "Dashboard Executivo",
+      description: "Dashboard interativo para acompanhamento de KPIs e métricas de negócio em tempo real.",
+      category: "Business Intelligence",
+      image: "📈", 
+      technologies: ["Power BI", "DAX", "SQL Server"]
     },
     {
-      title: "Aplicação Streamlit para Análise Preditiva",
-      description: "Sistema web interativo para análise de tendências operacionais com integração a modelos de ML.",
-      technologies: ["Streamlit", "Python", "Scikit-learn", "Pandas", "Plotly"],
-      icon: "📈",
-      gradient: "from-purple-500 to-pink-600"
+      title: "Previsão de Demanda",
+      description: "Modelo preditivo para forecasting de vendas utilizando séries temporais e machine learning.",
+      category: "Machine Learning",
+      image: "🔮",
+      technologies: ["Python", "Prophet", "Pandas"]
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50,
-      scale: 0.9
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
+  const filteredProjects = activeFilter === 'Todos' 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 bg-black/20">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -74,119 +56,97 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">Projetos Relevantes</span>
+            Meus <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Projetos</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Soluções inovadoras desenvolvidas com foco em AI e análise de dados
+            Alguns dos projetos de análise de dados mais impactantes que desenvolvi,
+            demonstrando diferentes habilidades e tecnologias.
           </p>
         </motion.div>
 
+        {/* Filter Buttons */}
         <motion.div 
-          className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              whileHover={{ 
-                scale: 1.03,
-                y: -10,
-                transition: { duration: 0.3 }
-              }}
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                activeFilter === filter
+                  ? 'bg-purple-600 text-white'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+              }`}
             >
-              <Card className="bg-gray-800/50 border-gray-700 p-8 hover:border-primary/50 transition-all duration-300 group h-full backdrop-blur-sm relative overflow-hidden">
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+              {filter}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Search Bar */}
+        <motion.div 
+          className="max-w-md mx-auto mb-12"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Buscar projetos..."
+              className="w-full bg-gray-800 border border-gray-600 rounded-full px-6 py-3 text-gray-300 focus:border-purple-500 focus:outline-none"
+            />
+            <span className="absolute right-4 top-1/2 transform -translate-y-1/2">🔍</span>
+          </div>
+        </motion.div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {filteredProjects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+            >
+              <Card className={`bg-gray-800/50 border-gray-700 p-6 hover:border-purple-500/50 transition-all duration-300 h-full ${
+                project.featured ? 'border-purple-500/30' : ''
+              }`}>
+                <div className="text-6xl mb-4 text-center">{project.image}</div>
+                <h3 className="text-xl font-bold mb-3 text-center">{project.title}</h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
                 
-                <div className="relative z-10">
-                  <div className="mb-6">
-                    <motion.div 
-                      className="text-4xl mb-4"
-                      animate={{ 
-                        rotate: [0, 10, -10, 0],
-                        scale: [1, 1.1, 1]
-                      }}
-                      transition={{ 
-                        duration: 3,
-                        repeat: Infinity,
-                        repeatDelay: 5
-                      }}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech) => (
+                    <Badge 
+                      key={tech}
+                      variant="secondary" 
+                      className="bg-gray-700 text-gray-300"
                     >
-                      {project.icon}
-                    </motion.div>
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed mb-6">
-                      {project.description}
-                    </p>
-                  </div>
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
 
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-sm font-semibold text-primary mb-3">Tecnologias:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, i) => (
-                          <motion.div
-                            key={i}
-                            initial={{ opacity: 0, scale: 0 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.1 * i }}
-                            viewport={{ once: true }}
-                          >
-                            <Badge 
-                              variant="secondary" 
-                              className="bg-gray-700/80 text-gray-300 hover:bg-primary hover:text-black transition-colors duration-300 backdrop-blur-sm"
-                            >
-                              {tech}
-                            </Badge>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4 pt-4">
-                      <motion.button 
-                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 bg-gray-700/30 px-3 py-1 rounded-full backdrop-blur-sm"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Github size={16} />
-                        <span className="text-sm">Código</span>
-                      </motion.button>
-                      <motion.button 
-                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 bg-gray-700/30 px-3 py-1 rounded-full backdrop-blur-sm"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink size={16} />
-                        <span className="text-sm">Ver Projeto</span>
-                      </motion.button>
-                    </div>
-                  </div>
+                <div className="flex gap-4 justify-center">
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors">
+                    Ver Projeto
+                  </button>
+                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    GitHub
+                  </button>
                 </div>
               </Card>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-gray-700">
-            <blockquote className="text-xl md:text-2xl italic text-gray-300">
-              "Transformo dados em decisões estratégicas e crio soluções web inteligentes através da integração de IA e tecnologias inovadoras."
-            </blockquote>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

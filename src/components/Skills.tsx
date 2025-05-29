@@ -1,158 +1,156 @@
 
 import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Linguagens & Frameworks",
-      icon: "💻",
-      skills: [
-        "Python (Django, Flask, Pandas, Beautiful Soup, Selenium, Streamlit)",
-        "JavaScript (ES6+)",
-        "HTML5/CSS3",
-        "SQL (MySQL, SQL Server, Oracle)",
-        "Node.js (Básico)"
-      ]
-    },
-    {
-      title: "Desenvolvimento Web & IA",
-      icon: "🤖",
-      skills: [
-        "Django",
-        "Flask",
-        "Streamlit",
-        "LangChain",
-        "OpenAI API",
-        "Claude API",
-        "Desenvolvimento Frontend/Backend",
-        "APIs RESTful"
-      ]
-    },
-    {
-      title: "Dados & Analytics",
-      icon: "📊",
-      skills: [
-        "Power BI",
-        "Pentaho",
-        "Looker Studio",
-        "ETL/ELT",
-        "Data Warehousing",
-        "Modelagem Dimensional (Star Schema)",
-        "MongoDB"
-      ]
-    },
-    {
-      title: "Cloud & Big Data",
-      icon: "☁️",
-      skills: [
-        "Databricks (Conceitos)",
-        "Apache Spark (Fundamentos)",
-        "SharePoint Integration",
-        "Power Apps",
-        "Power Automate"
-      ]
-    },
-    {
-      title: "DevOps & Ferramentas",
-      icon: "🛠️",
-      skills: [
-        "Git",
-        "ZABBIX (Monitoramento)",
-        "SAP PM",
-        "LangChain",
-        "OpenAI API"
-      ]
-    },
-    {
-      title: "Metodologias",
-      icon: "📋",
-      skills: [
-        "Scrum",
-        "Análise de Requisitos",
-        "Arquitetura de Dados"
-      ]
-    }
+  const skillBars = [
+    { name: "Python", level: 90, color: "from-blue-500 to-blue-600" },
+    { name: "SQL", level: 98, color: "from-purple-500 to-purple-600" },
+    { name: "Django", level: 95, color: "from-cyan-500 to-cyan-600" },
+    { name: "Power BI", level: 100, color: "from-purple-500 to-purple-600" },
+    { name: "Flask", level: 100, color: "from-purple-500 to-purple-600" },
+    { name: "Excel Avançado", level: 93, color: "from-cyan-500 to-cyan-600" },
+    { name: "Machine Learning", level: 80, color: "from-purple-500 to-purple-600" },
+    { name: "Estatística", level: 95, color: "from-cyan-500 to-cyan-600" },
+    { name: "Big Data (Spark)", level: 60, color: "from-cyan-500 to-cyan-600" },
+    { name: "JavaScript", level: 65, color: "from-purple-500 to-purple-600" }
   ];
 
-  const certifications = [
-    {
-      category: "Data Science & AI",
-      items: [
-        "Python Avançado para Dados (Pandas, NumPy, Beautiful Soup, Selenium)",
-        "LangChain & OpenAI API Integration",
-        "Claude API & LLMs para Desenvolvimento Web",
-        "ETL/ELT com Power BI Dataflow & Pentaho"
-      ]
-    },
-    {
-      category: "Cloud & Big Data",
-      items: [
-        "Databricks & Apache Spark (Intermediário)",
-        "Power Platform (Power BI, Power Apps, Power Automate)"
-      ]
-    },
-    {
-      category: "DevOps & Metodologias",
-      items: [
-        "Git/GitHub para Versionamento",
-        "Scrum Foundation"
-      ]
-    }
+  const techIcons = [
+    { name: "Python", icon: "🐍" },
+    { name: "Pandas", icon: "🐼" },
+    { name: "NumPy", icon: "📊" },
+    { name: "Scikit-learn", icon: "🤖" },
+    { name: "TensorFlow", icon: "🧠" },
+    { name: "Git", icon: "📝" },
+    { name: "SQL", icon: "🗃️" },
+    { name: "Power BI", icon: "📈" },
+    { name: "Django", icon: "🎯" },
+    { name: "Flask", icon: "⚡" },
+    { name: "Spark", icon: "✨" },
+    { name: "Excel", icon: "📋" }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-900/30">
+    <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-on-scroll">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Competências Técnicas</span>
+            Minhas <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Habilidades</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Tecnologias e ferramentas que domino para criar soluções inovadoras
+            Combinação de habilidades técnicas e analíticas que me permitem transformar dados 
+            brutos em insights acionáveis e visualizações impactantes.
           </p>
+        </motion.div>
+
+        {/* Skills Progress Bars */}
+        <div className="mb-16">
+          <motion.div 
+            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div>
+              <h3 className="text-xl font-semibold mb-6 text-center">
+                — Níveis de Proficiência —
+              </h3>
+              {skillBars.slice(0, 5).map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  className="mb-6"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300 font-medium">{skill.name}</span>
+                    <span className="text-gray-400">{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <motion.div
+                      className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      transition={{ duration: 1.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-6 text-center">
+                — Níveis de Proficiência —
+              </h3>
+              {skillBars.slice(5).map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  className="mb-6"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300 font-medium">{skill.name}</span>
+                    <span className="text-gray-400">{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <motion.div
+                      className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      transition={{ duration: 1.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="bg-gray-800/50 border-gray-700 p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 animate-on-scroll">
-              <div className="text-center mb-6">
-                <div className="text-4xl mb-4">{category.icon}</div>
-                <h3 className="text-xl font-bold gradient-text">{category.title}</h3>
-              </div>
-              <ul className="space-y-3">
-                {category.skills.map((skill, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-300">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">{skill}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          ))}
-        </div>
-
-        <div className="animate-on-scroll">
-          <h3 className="text-3xl font-bold text-center mb-12">
-            <span className="gradient-text">Certificações & Especializações</span>
-          </h3>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <Card key={index} className="bg-gray-800/50 border-gray-700 p-6 hover:border-primary/50 transition-all duration-300">
-                <h4 className="text-lg font-bold text-primary mb-4">{cert.category}</h4>
-                <ul className="space-y-3">
-                  {cert.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-300">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+        {/* Tech Icons Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-semibold">
+              — <span className="text-cyan-400">Ferramentas & Linguagens</span> —
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+            {techIcons.map((tech, index) => (
+              <motion.div
+                key={tech.name}
+                className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-purple-500/50 transition-all duration-300"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="text-3xl mb-2">{tech.icon}</div>
+                <div className="text-sm text-gray-300 font-medium">{tech.name}</div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

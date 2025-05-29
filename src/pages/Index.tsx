@@ -13,13 +13,13 @@ const Index = () => {
   useScrollAnimation();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-blue-900/20">
       <Header />
       <Hero />
       <About />
+      <Skills />
       <Experience />
       <Projects />
-      <Skills />
       <Contact />
       <Footer />
     </div>
