@@ -2,6 +2,7 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projects = [
@@ -31,63 +32,150 @@ const Projects = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.9
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-on-scroll">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Projetos Relevantes</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Soluções inovadoras desenvolvidas com foco em AI e análise de dados
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div 
+          className="grid md:grid-cols-2 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {projects.map((project, index) => (
-            <Card key={index} className="bg-gray-800/50 border-gray-700 p-8 hover:border-primary/50 transition-all duration-300 hover:scale-105 animate-on-scroll group">
-              <div className="mb-6">
-                <div className="text-4xl mb-4">{project.icon}</div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  {project.description}
-                </p>
-              </div>
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              whileHover={{ 
+                scale: 1.05,
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+            >
+              <Card className="bg-gray-800/50 border-gray-700 p-8 hover:border-primary/50 transition-all duration-300 group h-full hover-lift">
+                <div className="mb-6">
+                  <motion.div 
+                    className="text-4xl mb-4"
+                    animate={{ 
+                      rotate: [0, 10, -10, 0],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ 
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatDelay: 3
+                    }}
+                  >
+                    {project.icon}
+                  </motion.div>
+                  <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {project.description}
+                  </p>
+                </div>
 
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-sm font-semibold text-primary mb-3">Tecnologias:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, i) => (
-                      <Badge key={i} variant="secondary" className="bg-gray-700 text-gray-300 hover:bg-primary hover:text-black transition-colors duration-300">
-                        {tech}
-                      </Badge>
-                    ))}
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-sm font-semibold text-primary mb-3">Tecnologias:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, scale: 0 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.1 * i }}
+                          viewport={{ once: true }}
+                        >
+                          <Badge 
+                            variant="secondary" 
+                            className="bg-gray-700 text-gray-300 hover:bg-primary hover:text-black transition-colors duration-300"
+                          >
+                            {tech}
+                          </Badge>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 pt-4">
+                    <motion.button 
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github size={16} />
+                      <span className="text-sm">Código</span>
+                    </motion.button>
+                    <motion.button 
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink size={16} />
+                      <span className="text-sm">Ver Projeto</span>
+                    </motion.button>
                   </div>
                 </div>
-
-                <div className="flex gap-4 pt-4">
-                  <button className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300">
-                    <Github size={16} />
-                    <span className="text-sm">Código</span>
-                  </button>
-                  <button className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300">
-                    <ExternalLink size={16} />
-                    <span className="text-sm">Ver Projeto</span>
-                  </button>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="text-center mt-16 animate-on-scroll">
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
           <blockquote className="text-xl md:text-2xl italic text-gray-300 max-w-4xl mx-auto">
             "Transformo dados em decisões estratégicas e crio soluções web inteligentes através da integração de IA e tecnologias inovadoras."
           </blockquote>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

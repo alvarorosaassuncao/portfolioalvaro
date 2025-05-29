@@ -52,6 +52,7 @@
     @apply bg-background text-foreground;
     background: linear-gradient(45deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%);
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   html {
@@ -67,16 +68,204 @@
 
   .glow-effect {
     box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    transition: box-shadow 0.3s ease;
   }
 
+  .glow-effect:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+  }
+
+  /* Animation Base Classes */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .stagger-child {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .stagger-child.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Parallax */
+  .parallax {
+    will-change: transform;
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Pulse Glow */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from {
+      box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    }
+    to {
+      box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+    }
+  }
+
+  /* Text Reveal Animation */
+  .text-reveal {
+    overflow: hidden;
+  }
+
+  .text-reveal span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: text-reveal 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes text-reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Typewriter Effect */
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid #ff6b35;
+    white-space: nowrap;
+    animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #ff6b35;
+    }
+  }
+
+  /* Background Animation */
+  .bg-animate {
+    background-size: 400% 400%;
+    animation: bg-animate 8s ease infinite;
+  }
+
+  @keyframes bg-animate {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Ripple Effect */
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 107, 53, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .ripple:hover::before {
+    width: 300px;
+    height: 300px;
   }
 }

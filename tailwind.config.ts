@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -121,7 +120,40 @@ export default {
 						transform: 'translateY(0px)'
 					},
 					'50%': {
-						transform: 'translateY(-10px)'
+						transform: 'translateY(-20px)'
+					}
+				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(-25%)',
+						animationTimingFunction: 'cubic-bezier(0.8,0,1,1)'
+					},
+					'50%': {
+						transform: 'none',
+						animationTimingFunction: 'cubic-bezier(0,0,0.2,1)'
+					}
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(255, 107, 53, 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px rgba(255, 107, 53, 0.6)'
+					}
+				},
+				'text-shimmer': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%'
 					}
 				}
 			},
@@ -131,7 +163,11 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite',
+				'bounce-slow': 'bounce-slow 3s infinite',
+				'wiggle': 'wiggle 1s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
+				'text-shimmer': 'text-shimmer 3s ease-in-out infinite'
 			}
 		}
 	},
