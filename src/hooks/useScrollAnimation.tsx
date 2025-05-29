@@ -34,9 +34,10 @@ export const useScrollAnimation = () => {
       const parallaxElements = document.querySelectorAll('.parallax');
       
       parallaxElements.forEach((element) => {
-        const speed = element.getAttribute('data-speed') || 0.5;
+        const htmlElement = element as HTMLElement;
+        const speed = parseFloat(htmlElement.getAttribute('data-speed') || '0.5');
         const yPos = -(scrolled * speed);
-        element.style.transform = `translateY(${yPos}px)`;
+        htmlElement.style.transform = `translateY(${yPos}px)`;
       });
     };
 

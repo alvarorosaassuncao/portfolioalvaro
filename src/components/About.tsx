@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-20 relative bg-gray-900/50">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -14,42 +14,44 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Sobre Mim</span>
+            <span className="gradient-text bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">Sobre Mim</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Conheça minha trajetória profissional e paixão por tecnologia
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          {/* Profile */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-gray-800/50 border-gray-700 p-8 hover:border-primary/50 transition-all duration-300 hover-lift">
+            <Card className="bg-gray-800/50 border-gray-700 p-8 hover:border-primary/50 transition-all duration-300 backdrop-blur-sm">
               <motion.h3 
-                className="text-2xl font-bold mb-6 gradient-text"
+                className="text-2xl font-bold mb-6"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Perfil Profissional
+                <span className="gradient-text bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">Perfil Profissional</span>
               </motion.h3>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.6, staggerChildren: 0.2 }}
                 viewport={{ once: true }}
+                className="space-y-6"
               >
-                <p className="text-gray-300 leading-relaxed mb-6">
+                <p className="text-gray-300 leading-relaxed">
                   Engenheiro de Software e Full Stack Developer especializado em soluções AI com foco em Análise de 
                   Dados, Desenvolvimento Web e Automação de Processos com 3+ anos de experiência no setor de 
                   O&G (Petrobras).
                 </p>
-                <p className="text-gray-300 leading-relaxed mb-6">
+                <p className="text-gray-300 leading-relaxed">
                   Expert em desenvolvimento Python, Django, ETL/ELT, Power BI e Web Scraping. 
                   Pioneiro na implementação de LLMs e IA para desenvolvimento de sistemas e sites inteligentes.
                 </p>
@@ -61,6 +63,7 @@ const About = () => {
             </Card>
           </motion.div>
 
+          {/* Details */}
           <div className="space-y-6">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -68,7 +71,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-gray-800/50 border-gray-700 p-6 hover:border-primary/50 transition-all duration-300 hover-lift">
+              <Card className="bg-gray-800/50 border-gray-700 p-6 hover:border-primary/50 transition-all duration-300 backdrop-blur-sm">
                 <h4 className="text-xl font-semibold mb-4 text-primary">Diferenciais</h4>
                 <ul className="space-y-3 text-gray-300">
                   {[
@@ -99,7 +102,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-gray-800/50 border-gray-700 p-6 hover:border-primary/50 transition-all duration-300 hover-lift">
+              <Card className="bg-gray-800/50 border-gray-700 p-6 hover:border-primary/50 transition-all duration-300 backdrop-blur-sm">
                 <h4 className="text-xl font-semibold mb-4 text-primary">Formação</h4>
                 <div className="space-y-4 text-gray-300">
                   <motion.div

@@ -50,7 +50,9 @@
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(45deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%);
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #0f0f0f 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -59,23 +61,34 @@
     scroll-behavior: smooth;
   }
 
+  @keyframes gradientShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
   .gradient-text {
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: textShimmer 3s ease-in-out infinite;
   }
 
-  .glow-effect {
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
-    transition: box-shadow 0.3s ease;
+  @keyframes textShimmer {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
 
-  .glow-effect:hover {
-    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
-  }
-
-  /* Animation Base Classes */
+  /* Enhanced Animation Base Classes */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -147,35 +160,73 @@
     will-change: transform;
   }
 
-  /* Floating Animation */
-  .floating {
-    animation: floating 6s ease-in-out infinite;
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  @keyframes floating {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  .hover-lift:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
   }
 
-  /* Pulse Glow */
-  .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite alternate;
+  /* Glow Effects */
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    transition: box-shadow 0.3s ease;
   }
 
-  @keyframes pulse-glow {
-    from {
-      box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
-    }
-    to {
-      box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
-    }
+  .glow-effect:hover {
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
   }
 
-  /* Text Reveal Animation */
+  /* Advanced Button Effects */
+  .btn-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+    z-index: -1;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  /* Card Animations */
+  .card-hover {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+
+  .card-hover:hover::before {
+    opacity: 1;
+  }
+
+  /* Text Effects */
   .text-reveal {
     overflow: hidden;
   }
@@ -184,32 +235,62 @@
     display: inline-block;
     opacity: 0;
     transform: translateY(100%);
-    animation: text-reveal 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: textReveal 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
-  @keyframes text-reveal {
+  @keyframes textReveal {
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
 
-  /* Hover Effects */
-  .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Backdrop Blur Enhancements */
+  .backdrop-blur-custom {
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
   }
 
-  .hover-lift:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  /* Loading Animations */
+  .loading-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 
-  /* Typewriter Effect */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Scroll animations */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Enhanced typing effect */
   .typewriter {
     overflow: hidden;
-    border-right: 2px solid #ff6b35;
+    border-right: 3px solid #ff6b35;
     white-space: nowrap;
-    animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation: typewriter 4s steps(40, end), blinkCaret 0.8s step-end infinite;
   }
 
   @keyframes typewriter {
@@ -221,51 +302,12 @@
     }
   }
 
-  @keyframes blink-caret {
+  @keyframes blinkCaret {
     from, to {
       border-color: transparent;
     }
     50% {
       border-color: #ff6b35;
     }
-  }
-
-  /* Background Animation */
-  .bg-animate {
-    background-size: 400% 400%;
-    animation: bg-animate 8s ease infinite;
-  }
-
-  @keyframes bg-animate {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
-  /* Ripple Effect */
-  .ripple {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .ripple::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 107, 53, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-  }
-
-  .ripple:hover::before {
-    width: 300px;
-    height: 300px;
   }
 }
