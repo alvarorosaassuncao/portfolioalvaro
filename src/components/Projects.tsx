@@ -11,30 +11,109 @@ const Projects = () => {
   const filters = ['Todos', 'Machine Learning', 'Business Intelligence', 'Análise Estatística', 'NLP'];
   
   const projects = [
+    // Machine Learning Projects
     {
-      title: "ANÁLISE DE DADOS",
-      subtitle: "MARKETPLACE DA ADIDAS",
-      description: "Análise de dados para identificação de tendências de compra, resultando em 20% mais vendas.",
-      category: "Ciência de Dados",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Power BI", "SQL", "Excel"],
+      title: "PREDIÇÃO DE VENDAS",
+      subtitle: "MACHINE LEARNING",
+      description: "Modelo preditivo para prever vendas futuras utilizando algoritmos de regressão e séries temporais.",
+      category: "Machine Learning",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "Scikit-learn", "TensorFlow", "Pandas"],
       featured: true
     },
     {
-      title: "PEDAL PRIME",
-      subtitle: "DATA ANALYSIS",
-      description: "Criação de toda a pipeline de dados, dashboards e relatórios para identificação de tendências de compra, resultando em 20% mais vendas.",
-      category: "Ciência de Dados", 
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "SQL", "Excel", "Power BI"]
+      title: "DETECÇÃO DE FRAUDES",
+      subtitle: "MACHINE LEARNING",
+      description: "Sistema de detecção de fraudes em tempo real usando algoritmos de classificação e anomaly detection.",
+      category: "Machine Learning", 
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "Random Forest", "XGBoost", "Pandas"]
     },
     {
-      title: "ANÁLISE DO CATÁLOGO",
-      subtitle: "DA NETFLIX",
-      description: "Análise do catálogo de filmes da Netflix, identificação de segmentos de clientes e recomendação de filmes.",
-      category: "Ciência de Dados",
-      image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Power BI", "Python", "SQL", "Excel"]
+      title: "SEGMENTAÇÃO DE CLIENTES",
+      subtitle: "MACHINE LEARNING",
+      description: "Análise de clustering para segmentação de clientes baseada em comportamento de compra.",
+      category: "Machine Learning",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "K-Means", "PCA", "Matplotlib"]
+    },
+
+    // Business Intelligence Projects
+    {
+      title: "DASHBOARD EXECUTIVO",
+      subtitle: "BUSINESS INTELLIGENCE",
+      description: "Dashboard interativo para acompanhamento de KPIs e métricas de negócio em tempo real.",
+      category: "Business Intelligence",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Power BI", "SQL Server", "DAX", "Excel"]
+    },
+    {
+      title: "ANÁLISE DE PERFORMANCE",
+      subtitle: "BUSINESS INTELLIGENCE",
+      description: "Sistema de BI para análise de performance de vendas e identificação de oportunidades.",
+      category: "Business Intelligence",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Tableau", "PostgreSQL", "Python", "Excel"]
+    },
+    {
+      title: "RELATÓRIOS AUTOMATIZADOS",
+      subtitle: "BUSINESS INTELLIGENCE",
+      description: "Automação de relatórios gerenciais com atualização automática de dados e distribuição.",
+      category: "Business Intelligence",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Power BI", "Power Automate", "SharePoint", "SQL"]
+    },
+
+    // Análise Estatística Projects
+    {
+      title: "TESTE A/B MARKETING",
+      subtitle: "ANÁLISE ESTATÍSTICA",
+      description: "Análise estatística de testes A/B para otimização de campanhas de marketing digital.",
+      category: "Análise Estatística",
+      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400&h=200&fit=crop&crop=center",
+      technologies: ["R", "Python", "Scipy", "Plotly"]
+    },
+    {
+      title: "ANÁLISE DE SATISFAÇÃO",
+      subtitle: "ANÁLISE ESTATÍSTICA",
+      description: "Estudo estatístico sobre satisfação do cliente usando análise de regressão múltipla.",
+      category: "Análise Estadística",
+      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=200&fit=crop&crop=center",
+      technologies: ["SPSS", "R", "Excel", "Survey Monkey"]
+    },
+    {
+      title: "PREVISÃO DE DEMANDA",
+      subtitle: "ANÁLISE ESTATÍSTICA",
+      description: "Modelo estatístico para previsão de demanda usando análise de séries temporais.",
+      category: "Análise Estatística",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
+      technologies: ["R", "ARIMA", "Prophet", "ggplot2"]
+    },
+
+    // NLP Projects
+    {
+      title: "ANÁLISE DE SENTIMENTOS",
+      subtitle: "PROCESSAMENTO DE LINGUAGEM NATURAL",
+      description: "Sistema de análise de sentimentos em redes sociais para monitoramento de marca.",
+      category: "NLP",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "NLTK", "spaCy", "Transformers"]
+    },
+    {
+      title: "CHATBOT INTELIGENTE",
+      subtitle: "PROCESSAMENTO DE LINGUAGEM NATURAL",
+      description: "Desenvolvimento de chatbot para atendimento ao cliente usando modelos de linguagem.",
+      category: "NLP",
+      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "Rasa", "BERT", "Flask"]
+    },
+    {
+      title: "CLASSIFICAÇÃO DE TEXTOS",
+      subtitle: "PROCESSAMENTO DE LINGUAGEM NATURAL",
+      description: "Sistema automático de classificação de documentos e emails usando técnicas de NLP.",
+      category: "NLP",
+      image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "scikit-learn", "Word2Vec", "TF-IDF"]
     }
   ];
 
@@ -108,7 +187,7 @@ const Projects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.title}
