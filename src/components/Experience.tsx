@@ -41,8 +41,8 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Minha <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Experiência</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title">
+            Minha Experiência
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Minha trajetória profissional, trabalhando em projetos desafiadores e impactantes.
@@ -62,14 +62,14 @@ const Experience = () => {
               {/* Timeline Icon */}
               <div className="flex flex-col items-center mr-8">
                 <motion.div 
-                  className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mb-4"
+                  className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mb-4 shadow-lg"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   {exp.icon}
                 </motion.div>
                 {index !== experiences.length - 1 && (
-                  <div className="w-0.5 h-24 bg-gradient-to-b from-purple-500 to-cyan-500"></div>
+                  <div className="w-0.5 h-24 bg-gradient-to-b from-blue-500 to-cyan-500"></div>
                 )}
                 <div className="text-center mt-2">
                   <div className="text-cyan-400 font-semibold text-sm">{exp.period}</div>
@@ -78,11 +78,11 @@ const Experience = () => {
               </div>
 
               {/* Content Card */}
-              <Card className="flex-1 bg-gray-800/50 border-gray-700 p-6 hover:border-purple-500/50 transition-all duration-300">
+              <Card className="timeline-card flex-1 p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-1">{exp.company}</h3>
-                    <h4 className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    <h4 className="text-lg font-semibold silver-title">
                       {exp.position}
                     </h4>
                   </div>
@@ -100,7 +100,7 @@ const Experience = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <button className="bg-gray-800/50 border border-gray-600 text-gray-300 px-8 py-3 rounded-full hover:border-purple-500/50 transition-all duration-300">
+          <button className="sophisticated-card px-8 py-3 text-gray-300 hover:text-white transition-all duration-300">
             Ver currículo completo
           </button>
         </motion.div>

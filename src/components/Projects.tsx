@@ -1,4 +1,3 @@
-
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -58,8 +57,8 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Meus <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Projetos</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title">
+            Meus Projetos
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Alguns dos projetos de análise de dados mais impactantes que desenvolvi,
@@ -79,10 +78,10 @@ const Projects = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full transition-all duration-300 border ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 border ${
                 activeFilter === filter
-                  ? 'bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-500/25'
-                  : 'bg-gray-900/50 text-gray-300 border-gray-600 hover:bg-gray-800/70 hover:border-gray-500'
+                  ? 'modern-button text-white border-blue-500'
+                  : 'sophisticated-card text-gray-300 border-gray-600 hover:text-white'
               }`}
             >
               {filter}
@@ -104,7 +103,7 @@ const Projects = () => {
               placeholder="Buscar projetos..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-gray-900/50 border border-gray-600 rounded-full px-6 py-3 text-gray-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 backdrop-blur-sm"
+              className="w-full sophisticated-card px-6 py-4 text-gray-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             />
             <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">🔍</span>
           </div>
@@ -122,7 +121,7 @@ const Projects = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="group"
             >
-              <Card className="bg-gradient-to-br from-gray-900/90 to-black/90 border border-gray-700/50 rounded-3xl p-6 hover:border-blue-500/50 transition-all duration-500 h-full backdrop-blur-sm hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden">
+              <Card className="sophisticated-card p-8 h-full relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
@@ -131,7 +130,7 @@ const Projects = () => {
 
                 {/* Logo/Icon */}
                 <div className="relative z-10 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-2xl border border-gray-600/50 group-hover:border-blue-500/50 transition-all duration-300">
+                  <div className="w-20 h-20 tech-icon-container rounded-3xl flex items-center justify-center text-3xl">
                     {project.logo}
                   </div>
                 </div>
@@ -142,7 +141,7 @@ const Projects = () => {
                     <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 text-sm font-medium">
+                    <p className="text-gray-400 text-sm font-medium silver-title">
                       {project.subtitle}
                     </p>
                   </div>
@@ -159,17 +158,16 @@ const Projects = () => {
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
-                      <Badge 
+                      <span 
                         key={tech}
-                        variant="secondary" 
-                        className="bg-gray-800/70 text-gray-300 border border-gray-600/50 hover:border-gray-500 transition-colors text-xs"
+                        className="bg-gray-800/70 text-gray-300 border border-gray-600/50 hover:border-gray-500 transition-colors text-xs px-3 py-1 rounded-full"
                       >
                         {tech}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                  <button className="modern-button w-full text-white font-semibold py-3 px-6">
                     Ver Detalhes
                   </button>
                 </div>
@@ -186,7 +184,7 @@ const Projects = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <button className="bg-gradient-to-r from-gray-800 to-gray-900 border-2 border-dashed border-gray-600 hover:border-blue-500 text-gray-400 hover:text-blue-400 font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-800">
+          <button className="sophisticated-card border-2 border-dashed border-gray-600 hover:border-blue-500 text-gray-400 hover:text-blue-400 font-semibold py-4 px-8 transition-all duration-300">
             + Adicionar Novo Projeto
           </button>
         </motion.div>

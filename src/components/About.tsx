@@ -30,8 +30,8 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Sobre <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Mim</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title">
+            Sobre Mim
           </h2>
         </motion.div>
 
@@ -46,7 +46,7 @@ const About = () => {
           >
             <div>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Como <span className="text-purple-400 font-semibold">Analista de Dados</span>, minha paixão está em transformar conjuntos 
+                Como <span className="text-blue-400 font-semibold">Analista de Dados</span>, minha paixão está em transformar conjuntos 
                 de dados complexos em insights estratégicos que impulsionam decisões 
                 de negócios.
               </p>
@@ -89,7 +89,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-gray-800/50 border-gray-700 p-8 backdrop-blur-sm">
+            <Card className="sophisticated-card p-8">
               <div className="text-center mb-8">
                 <motion.div 
                   className="text-6xl font-bold mb-4"
@@ -98,7 +98,7 @@ const About = () => {
                   transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
                   viewport={{ once: true }}
                 >
-                  <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="silver-title">
                     3+
                   </span>
                 </motion.div>

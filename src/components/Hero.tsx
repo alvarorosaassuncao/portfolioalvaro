@@ -9,8 +9,8 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <ParticleBackground />
       
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900/50 to-blue-900/30"></div>
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900/20 to-blue-900/10"></div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.div
@@ -28,21 +28,21 @@ const Hero = () => {
             Olá, me chamo
           </motion.p>
 
-          {/* Main Name */}
+          {/* Main Name with Silver Effect */}
           <motion.h1 
             className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+            <span className="silver-title">
               Álvaro Silva Rosa
             </span>
           </motion.h1>
           
-          {/* Subtitle */}
+          {/* Subtitle with Silver Effect */}
           <motion.h2 
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-300"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 silver-title"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -52,7 +52,7 @@ const Hero = () => {
           
           {/* Description */}
           <motion.p 
-            className="text-lg md:text-xl lg:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto"
+            className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -69,7 +69,7 @@ const Hero = () => {
             transition={{ delay: 1 }}
           >
             <Button 
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+              className="modern-button text-white font-semibold py-4 px-8 text-lg"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Ver Projetos

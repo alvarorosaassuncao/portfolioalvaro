@@ -41,8 +41,8 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Minhas <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Habilidades</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title">
+            Minhas Habilidades
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Combinação de habilidades técnicas e analíticas que me permitem transformar dados 
@@ -60,7 +60,7 @@ const Skills = () => {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-xl font-semibold mb-6 text-center">
+              <h3 className="text-xl font-semibold mb-6 text-center silver-title">
                 — Níveis de Proficiência —
               </h3>
               {skillBars.slice(0, 5).map((skill, index) => (
@@ -76,9 +76,9 @@ const Skills = () => {
                     <span className="text-gray-300 font-medium">{skill.name}</span>
                     <span className="text-gray-400">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div className="skill-bar-bg h-3">
                     <motion.div
-                      className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
+                      className="skill-bar-fill h-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 1.5, delay: index * 0.1 }}
@@ -90,7 +90,7 @@ const Skills = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-6 text-center">
+              <h3 className="text-xl font-semibold mb-6 text-center silver-title">
                 — Níveis de Proficiência —
               </h3>
               {skillBars.slice(5).map((skill, index) => (
@@ -106,9 +106,9 @@ const Skills = () => {
                     <span className="text-gray-300 font-medium">{skill.name}</span>
                     <span className="text-gray-400">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div className="skill-bar-bg h-3">
                     <motion.div
-                      className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
+                      className="skill-bar-fill h-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 1.5, delay: index * 0.1 }}
@@ -129,8 +129,8 @@ const Skills = () => {
           viewport={{ once: true }}
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-semibold">
-              — <span className="text-cyan-400">Ferramentas & Linguagens</span> —
+            <h3 className="text-2xl font-semibold silver-title">
+              — Ferramentas & Linguagens —
             </h3>
           </div>
           
@@ -138,7 +138,7 @@ const Skills = () => {
             {techIcons.map((tech, index) => (
               <motion.div
                 key={tech.name}
-                className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-purple-500/50 transition-all duration-300"
+                className="tech-icon-container p-6 text-center"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}

@@ -5,32 +5,32 @@
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 98%;
     --primary: 217 91% 60%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 14%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -42,12 +42,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background: 
-      radial-gradient(ellipse at top, rgba(59, 130, 246, 0.15) 0%, transparent 50%), 
-      radial-gradient(ellipse at bottom, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
-      linear-gradient(135deg, #000000 0%, #0f0f0f 25%, #1a1a1a 50%, #0f0f0f 75%, #000000 100%);
-    background-size: 100% 100%, 100% 100%, 400% 400%;
-    animation: gradientShift 20s ease infinite;
+    background: #000000;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -56,31 +51,109 @@
     scroll-behavior: smooth;
   }
 
-  @keyframes gradientShift {
-    0%, 100% {
-      background-position: 0% 50%, 0% 50%, 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%, 100% 50%, 100% 50%;
-    }
-  }
-
-  .gradient-text {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 50%, #60a5fa 100%);
+  /* Silver metallic gradient for titles */
+  .silver-title {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 15%, #cbd5e1 30%, #94a3b8 45%, #64748b 60%, #475569 75%, #334155 90%, #1e293b 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: textShimmer 4s ease-in-out infinite;
+    animation: silverShimmer 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.3));
   }
 
-  @keyframes textShimmer {
+  @keyframes silverShimmer {
     0%, 100% {
       background-position: 0% 50%;
     }
     50% {
       background-position: 100% 50%;
     }
+  }
+
+  /* Enhanced card styles */
+  .sophisticated-card {
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.9), rgba(5, 5, 5, 0.95));
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 28px;
+    backdrop-filter: blur(20px);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.4),
+      0 1px 0 rgba(255, 255, 255, 0.1) inset,
+      0 -1px 0 rgba(0, 0, 0, 0.3) inset;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .sophisticated-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 
+      0 32px 64px rgba(0, 0, 0, 0.5),
+      0 0 40px rgba(59, 130, 246, 0.15),
+      0 1px 0 rgba(255, 255, 255, 0.15) inset;
+  }
+
+  /* Button enhancements */
+  .modern-button {
+    background: linear-gradient(145deg, rgba(59, 130, 246, 0.9), rgba(37, 99, 235, 0.9));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    box-shadow: 
+      0 8px 32px rgba(59, 130, 246, 0.25),
+      0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .modern-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 
+      0 12px 40px rgba(59, 130, 246, 0.35),
+      0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  }
+
+  /* Progress bar enhancements */
+  .skill-bar-bg {
+    background: linear-gradient(90deg, rgba(20, 20, 20, 0.8), rgba(30, 30, 30, 0.8));
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .skill-bar-fill {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    border-radius: 10px;
+  }
+
+  /* Icon container enhancements */
+  .tech-icon-container {
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.9), rgba(5, 5, 5, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .tech-icon-container:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Timeline enhancements */
+  .timeline-card {
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.85), rgba(5, 5, 5, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 24px;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .timeline-card:hover {
+    transform: translateX(8px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
   }
 
   /* Scroll animations */
@@ -148,114 +221,6 @@
   .stagger-child.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  /* Enhanced Hover Effects */
-  .hover-lift {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
-  }
-
-  /* Card Animations */
-  .card-hover {
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  .card-hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-  }
-
-  .card-hover:hover::before {
-    opacity: 1;
-  }
-
-  /* Backdrop Blur Enhancements */
-  .backdrop-blur-custom {
-    backdrop-filter: blur(10px) saturate(180%);
-    background-color: rgba(0, 0, 0, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  }
-
-  /* Loading Animations */
-  .loading-shimmer {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.1) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-size: 200% 100%;
-    animation: shimmer 2s infinite;
-  }
-
-  @keyframes shimmer {
-    0% {
-      background-position: -200% 0;
-    }
-    100% {
-      background-position: 200% 0;
-    }
-  }
-
-  /* Enhanced typing effect */
-  .typewriter {
-    overflow: hidden;
-    border-right: 3px solid #3b82f6;
-    white-space: nowrap;
-    animation: typewriter 4s steps(40, end), blinkCaret 0.8s step-end infinite;
-  }
-
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  @keyframes blinkCaret {
-    from, to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #3b82f6;
-    }
-  }
-
-  /* Progress bar animation */
-  .progress-bar {
-    transition: width 1.5s ease-out;
-  }
-
-  /* Silver metallic effects */
-  .silver-gradient {
-    background: linear-gradient(135deg, #c0c0c0 0%, #e5e5e5 25%, #b8b8b8 50%, #d4d4d4 75%, #c0c0c0 100%);
-    background-size: 200% 200%;
-    animation: silverShimmer 3s ease-in-out infinite;
-  }
-
-  @keyframes silverShimmer {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
   }
 
   /* Blue glow effects */
