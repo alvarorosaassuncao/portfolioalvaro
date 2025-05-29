@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send, Linkedin, Github } from 'lucide-react';
 import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,15 +15,34 @@ const Contact = () => {
     message: ''
   });
 
+  const { toast } = useToast();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link with form data
-    const mailtoLink = `mailto:asra.devops@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Nome: ${formData.name}\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`
-    )}`;
+    // Create WhatsApp message
+    const whatsappMessage = `*Nova mensagem do site*\n\n*Nome:* ${formData.name}\n*Email:* ${formData.email}\n*Assunto:* ${formData.subject}\n\n*Mensagem:*\n${formData.message}`;
     
-    window.location.href = mailtoLink;
+    // WhatsApp URL with Brazilian number format
+    const whatsappUrl = `https://wa.me/5532999482095?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success toast
+    toast({
+      title: "Mensagem enviada",
+      description: "Entrarei em contato em breve.",
+      duration: 5000,
+    });
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -186,7 +206,7 @@ const Contact = () => {
                   className="w-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white font-semibold py-2.5 sm:py-3 rounded-xl transition-all duration-300 text-sm sm:text-base"
                 >
                   <Send size={18} className="mr-2" />
-                  Enviar Mensagem
+                  Enviar via WhatsApp
                 </Button>
               </form>
             </Card>

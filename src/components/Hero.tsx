@@ -28,9 +28,9 @@ const Hero = () => {
             Olá, me chamo
           </motion.p>
 
-          {/* Main Name */}
+          {/* Main Name - Reduced size */}
           <motion.h1 
-            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-4"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -43,14 +43,14 @@ const Hero = () => {
             </span>
           </motion.h1>
           
-          {/* Subtitle */}
+          {/* New Subtitle with smaller formatting */}
           <motion.h2 
-            className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 silver-title"
+            className="text-base sm:text-xl md:text-2xl lg:text-3xl font-normal mb-6 sm:mb-8 text-gray-300"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Transformando dados em insights valiosos
+            Engenheiro de Software | Full Stack Developer especializado em soluções AI | Analista de Dados
           </motion.h2>
           
           {/* Description */}
@@ -60,7 +60,7 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            Sou um analista de dados apaixonado por encontrar padrões e histórias escondidas em conjuntos de dados complexos. Especializado em visualização de dados, engenharia de dados e business intelligence.
+            Transformando dados em insights valiosos
           </motion.p>
 
           {/* CTA Buttons */}
