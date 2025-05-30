@@ -1,4 +1,3 @@
-
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -6,7 +5,6 @@ import { useState } from 'react';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('Machine Learning');
-  const [searchTerm, setSearchTerm] = useState('');
   
   const filters = ['Machine Learning', 'Business Intelligence', 'Análise Estatística', 'NLP'];
   
@@ -131,9 +129,7 @@ const Projects = () => {
 
   const filteredProjects = projects.filter(project => {
     const matchesFilter = project.category === activeFilter;
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;
+    return matchesFilter;
   });
 
   return (
@@ -176,26 +172,6 @@ const Projects = () => {
               {filter}
             </button>
           ))}
-        </motion.div>
-
-        {/* Search Bar */}
-        <motion.div 
-          className="max-w-md mx-auto mb-12"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Buscar projetos..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full sophisticated-card px-6 py-4 text-gray-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-            />
-            <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">🔍</span>
-          </div>
         </motion.div>
 
         {/* Projects Grid */}

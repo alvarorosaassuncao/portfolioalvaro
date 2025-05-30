@@ -68,16 +68,22 @@ const Hero = () => {
             soluções inovadoras que impactem positivamente o mundo digital.
           </motion.p>
 
-          {/* CTA Buttons - Removed "Ver Projetos" button, kept only Contact */}
+          {/* CTA Buttons - Both buttons side by side */}
           <motion.div 
-            className="flex justify-center mb-16 sm:mb-24 md:mb-32"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center mb-16 sm:mb-24 md:mb-32"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.5 }}
           >
             <Button 
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base md:text-lg w-full sm:w-auto rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Ver Projetos
+            </Button>
+            <Button 
               variant="outline" 
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto max-w-xs"
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contato
