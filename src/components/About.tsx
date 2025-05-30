@@ -5,7 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { number: "2+", label: "Anos de Experiência" },
+    { number: "3+", label: "Anos de Experiência" },
     { number: "40+", label: "Projetos" },
     { number: "15+", label: "Clientes" },
     { number: "8+", label: "Ferramentas" }
@@ -57,21 +57,25 @@ const About = () => {
           >
             <div>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Como <span className="text-blue-400 font-semibold">Analista de Dados</span>, minha paixão está em transformar conjuntos 
-                de dados complexos em insights estratégicos que impulsionam decisões 
-                de negócios.
+                <span className="text-blue-400 font-semibold">Engenheiro de Software e Full Stack Developer</span> especializado em soluções AI com foco em Análise de
+                Dados, Desenvolvimento Web e Automação de Processos com <span className="text-cyan-400 font-semibold">3+ anos de experiência no setor de
+                O&G (Petrobras)</span>.
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Com experiência em diversos projetos, desenvolvi habilidades 
-                avançadas em análise estatística, visualização de dados, construção de 
-                modelos preditivos e processo de ETL.
+                Expert em desenvolvimento <span className="text-purple-400 font-semibold">Python, Django, ETL/ELT, Power BI e Web Scraping</span>.
+                Pioneiro na implementação de <span className="text-blue-400 font-semibold">LLMs e IA para desenvolvimento de sistemas e sites inteligentes</span>.
               </p>
               
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                Histórico comprovado de transformar dados brutos em insights estratégicos que impulsionam decisões
+                de negócio, resultando em <span className="text-green-400 font-semibold">otimização de processos e redução de custos operacionais</span>.
+              </p>
+
               <p className="text-lg text-gray-300 leading-relaxed">
-                Busco constantemente aprimorar meus conhecimentos em novas 
-                tecnologias e metodologias de análise, sempre com o objetivo de 
-                entregar resultados de alto valor para as organizações.
+                <span className="text-cyan-400 font-semibold">Diferenciais:</span> Desenvolvimento web AI-powered, vivência em ambiente crítico (plataformas petrolíferas),
+                metodologias ágeis e capacidade de liderar projetos de migração de dados complexos. 
+                <span className="text-purple-400 font-semibold"> Especialista em projetos utilizando IA LLM para desenvolvimento de sistemas e aplicações inteligentes</span>.
               </p>
             </div>
 
@@ -110,7 +114,7 @@ const About = () => {
                   viewport={{ once: true }}
                 >
                   <span className="text-white">
-                    2+
+                    3+
                   </span>
                 </motion.div>
                 <p className="text-cyan-400 text-xl font-semibold">Anos de Experiência</p>

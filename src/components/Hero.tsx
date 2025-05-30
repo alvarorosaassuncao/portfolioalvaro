@@ -30,7 +30,7 @@ const Hero = () => {
 
           {/* Main Name - Reduced size */}
           <motion.h1 
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -43,9 +43,9 @@ const Hero = () => {
             </span>
           </motion.h1>
           
-          {/* Professional Description with digital/gaming style font */}
-          <motion.h2 
-            className="text-xs sm:text-sm md:text-base lg:text-lg font-thin tracking-wider text-gray-300 mb-6 sm:mb-8"
+          {/* Professional Description with digital/gaming style font - Broken into multiple lines */}
+          <motion.div 
+            className="text-xs sm:text-sm md:text-base font-thin tracking-wider text-gray-300 mb-6 sm:mb-8 space-y-1"
             style={{ 
               fontFamily: "'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace",
               fontWeight: 200,
@@ -55,8 +55,10 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Engenheiro de Software | Full Stack Developer especializado em soluções AI | Analista de Dados
-          </motion.h2>
+            <div>Engenheiro de Software</div>
+            <div>Full Stack Developer especializado em soluções AI</div>
+            <div>Analista de Dados</div>
+          </motion.div>
           
           {/* Description */}
           <motion.p 
