@@ -21,7 +21,7 @@ const Hero = () => {
         >
           {/* Greeting */}
           <motion.p 
-            className="text-cyan-400 text-sm sm:text-base md:text-lg mb-3 sm:mb-4"
+            className="text-cyan-400 text-base sm:text-lg md:text-xl mb-3 sm:mb-4"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -29,20 +29,19 @@ const Hero = () => {
             Olá, me chamo
           </motion.p>
 
-          {/* Main Name - Reformatted */}
+          {/* Main Name - Both parts with same formatting */}
           <motion.h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <span className="silver-title">Alvaro</span>
-            <span className="text-blue-400 ml-2 font-light">Assunção</span>
+            <span className="silver-title">Alvaro Assunção</span>
           </motion.h1>
           
-          {/* Professional Description */}
+          {/* Professional Description - Increased font size */}
           <motion.div 
-            className="text-xs sm:text-sm md:text-base lg:text-lg font-light tracking-wide text-gray-300 mb-6 sm:mb-8 space-y-1 sm:space-y-2"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide text-gray-300 mb-6 sm:mb-8 space-y-2 sm:space-y-3"
             style={{ 
               fontFamily: "'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace",
               fontWeight: 300,
@@ -57,32 +56,28 @@ const Hero = () => {
             <div>Analista de Dados</div>
           </motion.div>
           
-          {/* Description */}
+          {/* Description - Updated content */}
           <motion.p 
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            Transformando dados em insights valiosos
+            Sou Engenheiro de software apaixonado por Tecnologia e Inteligência artificial, 
+            sempre em busca de transformar dados complexos em insights valiosos e criar 
+            soluções inovadoras que impactem positivamente o mundo digital.
           </motion.p>
 
-          {/* CTA Buttons - Enhanced for mobile with rounded corners */}
+          {/* CTA Buttons - Removed "Ver Projetos" button, kept only Contact */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center mb-16 sm:mb-24 md:mb-32"
+            className="flex justify-center mb-16 sm:mb-24 md:mb-32"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.5 }}
           >
             <Button 
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base md:text-lg w-full sm:w-auto rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Ver Projetos
-            </Button>
-            <Button 
               variant="outline" 
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto"
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto max-w-xs"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contato
@@ -91,7 +86,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator - Melhor centralização */}
+      {/* Scroll Indicator - Better centering */}
       <motion.div 
         className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer flex flex-col items-center"
         animate={{ y: [0, 10, 0] }}
