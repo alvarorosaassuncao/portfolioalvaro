@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('Todos');
+  const [activeFilter, setActiveFilter] = useState('Machine Learning');
   const [searchTerm, setSearchTerm] = useState('');
   
-  const filters = ['Todos', 'Machine Learning', 'Business Intelligence', 'Análise Estatística', 'NLP'];
+  const filters = ['Machine Learning', 'Business Intelligence', 'Análise Estatística', 'NLP'];
   
   const projects = [
     // Machine Learning Projects
@@ -19,6 +19,7 @@ const Projects = () => {
       category: "Machine Learning",
       image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
       technologies: ["Python", "Scikit-learn", "TensorFlow", "Pandas"],
+      githubUrl: "https://github.com/alvaroassuncao",
       featured: true
     },
     {
@@ -27,7 +28,8 @@ const Projects = () => {
       description: "Sistema de detecção de fraudes em tempo real usando algoritmos de classificação e anomaly detection.",
       category: "Machine Learning", 
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Random Forest", "XGBoost", "Pandas"]
+      technologies: ["Python", "Random Forest", "XGBoost", "Pandas"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
     {
       title: "SEGMENTAÇÃO DE CLIENTES",
@@ -35,7 +37,8 @@ const Projects = () => {
       description: "Análise de clustering para segmentação de clientes baseada em comportamento de compra.",
       category: "Machine Learning",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "K-Means", "PCA", "Matplotlib"]
+      technologies: ["Python", "K-Means", "PCA", "Matplotlib"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
 
     // Business Intelligence Projects
@@ -45,7 +48,8 @@ const Projects = () => {
       description: "Dashboard interativo para acompanhamento de KPIs e métricas de negócio em tempo real.",
       category: "Business Intelligence",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Power BI", "SQL Server", "DAX", "Excel"]
+      technologies: ["Power BI", "SQL Server", "DAX", "Excel"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
     {
       title: "ANÁLISE DE PERFORMANCE",
@@ -53,7 +57,8 @@ const Projects = () => {
       description: "Sistema de BI para análise de performance de vendas e identificação de oportunidades.",
       category: "Business Intelligence",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Tableau", "PostgreSQL", "Python", "Excel"]
+      technologies: ["Tableau", "PostgreSQL", "Python", "Excel"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
     {
       title: "RELATÓRIOS AUTOMATIZADOS",
@@ -61,7 +66,8 @@ const Projects = () => {
       description: "Automação de relatórios gerenciais com atualização automática de dados e distribuição.",
       category: "Business Intelligence",
       image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Power BI", "Power Automate", "SharePoint", "SQL"]
+      technologies: ["Power BI", "Power Automate", "SharePoint", "SQL"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
 
     // Análise Estatística Projects
@@ -71,15 +77,17 @@ const Projects = () => {
       description: "Análise estatística de testes A/B para otimização de campanhas de marketing digital.",
       category: "Análise Estatística",
       image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400&h=200&fit=crop&crop=center",
-      technologies: ["R", "Python", "Scipy", "Plotly"]
+      technologies: ["R", "Python", "Scipy", "Plotly"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
     {
       title: "ANÁLISE DE SATISFAÇÃO",
       subtitle: "ANÁLISE ESTATÍSTICA",
       description: "Estudo estatístico sobre satisfação do cliente usando análise de regressão múltipla.",
-      category: "Análise Estadística",
+      category: "Análise Estatística",
       image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=200&fit=crop&crop=center",
-      technologies: ["SPSS", "R", "Excel", "Survey Monkey"]
+      technologies: ["SPSS", "R", "Excel", "Survey Monkey"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
     {
       title: "PREVISÃO DE DEMANDA",
@@ -87,7 +95,8 @@ const Projects = () => {
       description: "Modelo estatístico para previsão de demanda usando análise de séries temporais.",
       category: "Análise Estatística",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
-      technologies: ["R", "ARIMA", "Prophet", "ggplot2"]
+      technologies: ["R", "ARIMA", "Prophet", "ggplot2"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
 
     // NLP Projects
@@ -97,7 +106,8 @@ const Projects = () => {
       description: "Sistema de análise de sentimentos em redes sociais para monitoramento de marca.",
       category: "NLP",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "NLTK", "spaCy", "Transformers"]
+      technologies: ["Python", "NLTK", "spaCy", "Transformers"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
     {
       title: "CHATBOT INTELIGENTE",
@@ -105,7 +115,8 @@ const Projects = () => {
       description: "Desenvolvimento de chatbot para atendimento ao cliente usando modelos de linguagem.",
       category: "NLP",
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Rasa", "BERT", "Flask"]
+      technologies: ["Python", "Rasa", "BERT", "Flask"],
+      githubUrl: "https://github.com/alvaroassuncao"
     },
     {
       title: "CLASSIFICAÇÃO DE TEXTOS",
@@ -113,12 +124,13 @@ const Projects = () => {
       description: "Sistema automático de classificação de documentos e emails usando técnicas de NLP.",
       category: "NLP",
       image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "scikit-learn", "Word2Vec", "TF-IDF"]
+      technologies: ["Python", "scikit-learn", "Word2Vec", "TF-IDF"],
+      githubUrl: "https://github.com/alvaroassuncao"
     }
   ];
 
   const filteredProjects = projects.filter(project => {
-    const matchesFilter = activeFilter === 'Todos' || project.category === activeFilter;
+    const matchesFilter = project.category === activeFilter;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
@@ -247,27 +259,19 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <button className="modern-button w-full text-white font-semibold py-3 px-6">
+                  <a 
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="modern-button w-full text-white font-semibold py-3 px-6 text-center block hover:no-underline"
+                  >
                     Ver Detalhes
-                  </button>
+                  </a>
                 </div>
               </Card>
             </motion.div>
           ))}
         </div>
-
-        {/* Add Project Button */}
-        <motion.div 
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <button className="sophisticated-card border-2 border-dashed border-gray-600 hover:border-blue-500 text-gray-400 hover:text-blue-400 font-semibold py-4 px-8 transition-all duration-300">
-            + Adicionar Novo Projeto
-          </button>
-        </motion.div>
       </div>
     </section>
   );

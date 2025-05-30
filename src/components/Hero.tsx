@@ -30,7 +30,7 @@ const Hero = () => {
 
           {/* Main Name - Reduced size */}
           <motion.h1 
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -43,9 +43,14 @@ const Hero = () => {
             </span>
           </motion.h1>
           
-          {/* New Subtitle with smaller formatting */}
+          {/* Professional Description with digital/gaming style font */}
           <motion.h2 
-            className="text-base sm:text-xl md:text-2xl lg:text-3xl font-normal mb-6 sm:mb-8 text-gray-300"
+            className="text-xs sm:text-sm md:text-base lg:text-lg font-thin tracking-wider text-gray-300 mb-6 sm:mb-8"
+            style={{ 
+              fontFamily: "'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace",
+              fontWeight: 200,
+              letterSpacing: '0.1em'
+            }}
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
