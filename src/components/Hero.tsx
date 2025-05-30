@@ -29,19 +29,15 @@ const Hero = () => {
             Olá, me chamo
           </motion.p>
 
-          {/* Main Name */}
+          {/* Main Name - Reformatted */}
           <motion.h1 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <span className="silver-title">
-              Alvaro{' '}
-              <span className="text-blue-400">
-                Assunção
-              </span>
-            </span>
+            <span className="silver-title">Alvaro</span>
+            <span className="text-blue-400 ml-2 font-light">Assunção</span>
           </motion.h1>
           
           {/* Professional Description */}
@@ -71,7 +67,7 @@ const Hero = () => {
             Transformando dados em insights valiosos
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Enhanced for mobile */}
           <motion.div 
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center mb-16 sm:mb-24 md:mb-32"
             initial={{ y: 50, opacity: 0 }}
@@ -79,7 +75,7 @@ const Hero = () => {
             transition={{ delay: 1.5 }}
           >
             <Button 
-              className="modern-button text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base md:text-lg w-full sm:w-auto"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base md:text-lg w-full sm:w-auto rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Ver Projetos
