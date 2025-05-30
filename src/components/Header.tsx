@@ -30,11 +30,10 @@ const Header = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          {/* Logo melhorado */}
+          {/* Logo - Nome maior e formatação original */}
           <div className="flex items-center space-x-2">
-            <div className="text-xl sm:text-2xl font-bold">
-              <span className="silver-title">Alvaro</span>
-              <span className="text-blue-400 ml-2">Assunção</span>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              <span className="text-white">Alvaro Assunção</span>
             </div>
           </div>
 

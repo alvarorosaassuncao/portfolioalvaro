@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,6 +14,18 @@ const Footer = () => {
           <p className="text-gray-400 text-base sm:text-lg mb-6">
             Transformando dados complexos em insights valiosos e soluções impactantes para negócios.
           </p>
+          
+          {/* Download CV Button */}
+          <div className="mb-6">
+            <a 
+              href="/curriculo.pdf" 
+              download
+              className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+            >
+              <Download size={20} />
+              Baixar Currículo
+            </a>
+          </div>
           
           {/* Social links */}
           <div className="flex justify-center gap-4 mb-8">
@@ -41,41 +53,41 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Navigation sections */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 max-w-4xl mx-auto">
+        {/* Navigation sections - Optimized for mobile */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 max-w-4xl mx-auto">
           {/* Links Rápidos */}
           <div className="text-center sm:text-left">
-            <h4 className="text-white font-semibold mb-4 text-lg">Links Rápidos</h4>
+            <h4 className="text-white font-semibold mb-3 text-base sm:text-lg">Links Rápidos</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-blue-400 transition-colors">Início</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-blue-400 transition-colors">Sobre</a></li>
-              <li><a href="#skills" className="text-gray-400 hover:text-blue-400 transition-colors">Habilidades</a></li>
-              <li><a href="#experience" className="text-gray-400 hover:text-blue-400 transition-colors">Experiência</a></li>
-              <li><a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors">Projetos</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contato</a></li>
+              <li><a href="#home" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Início</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Sobre</a></li>
+              <li><a href="#skills" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Habilidades</a></li>
+              <li><a href="#experience" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Experiência</a></li>
+              <li><a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Projetos</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Contato</a></li>
             </ul>
           </div>
 
           {/* Serviços */}
           <div className="text-center sm:text-left">
-            <h4 className="text-white font-semibold mb-4 text-lg">Serviços</h4>
+            <h4 className="text-white font-semibold mb-3 text-base sm:text-lg">Serviços</h4>
             <ul className="space-y-2">
-              <li><span className="text-gray-400">Visualização de Dados</span></li>
-              <li><span className="text-gray-400">Business Intelligence</span></li>
-              <li><span className="text-gray-400">Machine Learning</span></li>
-              <li><span className="text-gray-400">Consultoria</span></li>
-              <li><span className="text-gray-400">Análise Estatística</span></li>
+              <li><span className="text-gray-400 text-sm">Visualização de Dados</span></li>
+              <li><span className="text-gray-400 text-sm">Business Intelligence</span></li>
+              <li><span className="text-gray-400 text-sm">Machine Learning</span></li>
+              <li><span className="text-gray-400 text-sm">Consultoria</span></li>
+              <li><span className="text-gray-400 text-sm">Análise Estatística</span></li>
             </ul>
           </div>
 
-          {/* Informações */}
-          <div className="text-center sm:text-left">
-            <h4 className="text-white font-semibold mb-4 text-lg">Informações</h4>
+          {/* Informações - Hidden on mobile, visible on tablet+ */}
+          <div className="hidden md:block text-center sm:text-left">
+            <h4 className="text-white font-semibold mb-3 text-base sm:text-lg">Informações</h4>
             <ul className="space-y-2">
-              <li><span className="text-gray-400">Blog</span></li>
-              <li><span className="text-gray-400">FAQ</span></li>
-              <li><span className="text-gray-400">Condições</span></li>
-              <li><span className="text-gray-400">Privacidade</span></li>
+              <li><span className="text-gray-400 text-sm">Blog</span></li>
+              <li><span className="text-gray-400 text-sm">FAQ</span></li>
+              <li><span className="text-gray-400 text-sm">Condições</span></li>
+              <li><span className="text-gray-400 text-sm">Privacidade</span></li>
             </ul>
           </div>
         </div>

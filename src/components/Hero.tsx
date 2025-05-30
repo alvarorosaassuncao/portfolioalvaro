@@ -67,7 +67,7 @@ const Hero = () => {
             Transformando dados em insights valiosos
           </motion.p>
 
-          {/* CTA Buttons - Enhanced for mobile */}
+          {/* CTA Buttons - Enhanced for mobile with rounded corners */}
           <motion.div 
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center mb-16 sm:mb-24 md:mb-32"
             initial={{ y: 50, opacity: 0 }}
@@ -89,20 +89,20 @@ const Hero = () => {
             </Button>
           </motion.div>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          <div className="flex flex-col items-center text-gray-400">
-            <span className="text-xs sm:text-sm mb-2">Rolar para baixo</span>
-            <ArrowDown size={16} className="sm:w-5 sm:h-5" />
-          </div>
-        </motion.div>
       </div>
+
+      {/* Scroll Indicator - Melhor centralização */}
+      <motion.div 
+        className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer flex flex-col items-center"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+        <div className="flex flex-col items-center text-gray-400">
+          <span className="text-xs sm:text-sm mb-2">Rolar para baixo</span>
+          <ArrowDown size={16} className="sm:w-5 sm:h-5" />
+        </div>
+      </motion.div>
     </section>
   );
 };
