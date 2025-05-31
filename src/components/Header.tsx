@@ -42,7 +42,7 @@ const Header = () => {
                   letterSpacing: '0.1em'
                 }}
               >
-                AI.DEV
+                Alvaro Assunção
               </span>
             </div>
           </div>
