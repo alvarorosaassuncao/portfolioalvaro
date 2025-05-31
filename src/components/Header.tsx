@@ -32,8 +32,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo - AI Theme com robô */}
           <div className="flex items-center space-x-3">
-            <Bot className="text-cyan-400 w-8 h-8 sm:w-10 sm:h-10" />
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold">
+            <Bot className={`text-cyan-400 transition-all duration-300 ${
+              isScrolled ? 'w-6 h-6 sm:w-7 sm:h-7' : 'w-8 h-8 sm:w-10 sm:h-10'
+            }`} />
+            <div className={`font-bold transition-all duration-300 ${
+              isScrolled ? 'text-lg sm:text-xl md:text-2xl' : 'text-xl sm:text-2xl md:text-3xl'
+            }`}>
               <span 
                 className="text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text"
                 style={{ 
