@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Bot } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,10 +30,20 @@ const Header = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - Nome maior e formatação original */}
-          <div className="flex items-center space-x-2">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              <span className="text-white">Alvaro Assunção</span>
+          {/* Logo - AI Theme com robô */}
+          <div className="flex items-center space-x-3">
+            <Bot className="text-cyan-400 w-8 h-8 sm:w-10 sm:h-10" />
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold">
+              <span 
+                className="text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text"
+                style={{ 
+                  fontFamily: "'Orbitron', 'Monaco', 'Menlo', 'Consolas', monospace",
+                  fontWeight: 700,
+                  letterSpacing: '0.1em'
+                }}
+              >
+                AI.DEV
+              </span>
             </div>
           </div>
 
