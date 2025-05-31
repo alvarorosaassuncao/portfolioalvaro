@@ -6,7 +6,7 @@ import ParticleBackground from './ParticleBackground';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden mb-16 md:mb-24">
       <ParticleBackground />
       
       {/* Background gradient overlay */}
@@ -21,7 +21,7 @@ const Hero = () => {
         >
           {/* Greeting */}
           <motion.p 
-            className="text-cyan-400 text-base sm:text-lg md:text-xl mb-3 sm:mb-4"
+            className="text-cyan-400 text-base sm:text-lg md:text-xl mb-4 sm:mb-6"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -31,7 +31,7 @@ const Hero = () => {
 
           {/* Main Name - Both parts with same formatting */}
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 sm:mb-12"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -41,7 +41,7 @@ const Hero = () => {
           
           {/* Professional Description - Increased font size */}
           <motion.div 
-            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide text-gray-300 mb-6 sm:mb-8 space-y-2 sm:space-y-3"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide text-gray-300 mb-8 sm:mb-12 space-y-3 sm:space-y-4"
             style={{ 
               fontFamily: "'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace",
               fontWeight: 300,
@@ -58,7 +58,7 @@ const Hero = () => {
           
           {/* Description - Updated content */}
           <motion.p 
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -70,20 +70,20 @@ const Hero = () => {
 
           {/* CTA Buttons - Both buttons side by side */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center mb-16 sm:mb-24 md:mb-32"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center mb-20 sm:mb-28 md:mb-36"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.5 }}
           >
             <Button 
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base md:text-lg w-full sm:w-auto rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg md:text-xl w-full sm:w-auto rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Ver Projetos
             </Button>
             <Button 
               variant="outline" 
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto"
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-4 sm:py-5 px-8 sm:px-10 rounded-full text-base sm:text-lg md:text-xl font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contato
@@ -94,14 +94,14 @@ const Hero = () => {
 
       {/* Scroll Indicator - Better centering */}
       <motion.div 
-        className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer flex flex-col items-center"
+        className="absolute bottom-8 sm:bottom-10 md:bottom-12 left-1/2 transform -translate-x-1/2 cursor-pointer flex flex-col items-center"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <div className="flex flex-col items-center text-gray-400">
-          <span className="text-xs sm:text-sm mb-2">Rolar para baixo</span>
-          <ArrowDown size={16} className="sm:w-5 sm:h-5" />
+          <span className="text-sm sm:text-base mb-3">Rolar para baixo</span>
+          <ArrowDown size={20} className="sm:w-6 sm:h-6" />
         </div>
       </motion.div>
     </section>

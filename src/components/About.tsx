@@ -1,4 +1,3 @@
-
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
@@ -21,7 +20,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-12 sm:py-16 md:py-20 relative">
+    <section id="about" className="py-16 sm:py-20 md:py-24 relative">
       {/* Background similar to the uploaded image */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900/90 to-gray-800/80"></div>
       <div className="absolute inset-0 opacity-20">
@@ -35,34 +34,34 @@ const About = () => {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div 
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16 sm:mb-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Sobre <span className="text-purple-400">Mim</span>
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 items-start max-w-6xl mx-auto">
           {/* Left Content - Simplified */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <div>
-              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
+            <div className="space-y-6">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                 Como <span className="text-blue-400 font-semibold">Analista de Dados</span>, minha paixão está em transformar conjuntos 
                 de dados complexos em insights estratégicos que impulsionam decisões 
                 de negócios.
               </p>
               
-              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                 Com experiência em diversos projetos, desenvolvi habilidades 
                 avançadas em análise estatística, visualização de dados, construção de 
                 modelos preditivos e processo de ETL.
@@ -76,7 +75,7 @@ const About = () => {
             </div>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-10">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill}
@@ -86,8 +85,8 @@ const About = () => {
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <CheckCircle2 className="text-cyan-400 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                  <span className="text-gray-300 text-sm sm:text-base">{skill}</span>
+                  <CheckCircle2 className="text-cyan-400 w-5 h-5 flex-shrink-0" />
+                  <span className="text-gray-300 text-base">{skill}</span>
                 </motion.div>
               ))}
             </div>
@@ -100,23 +99,21 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-gray-900/40 border-gray-700/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl">
-              <div className="text-center mb-6 sm:mb-8">
+            <Card className="bg-gray-900/40 border-gray-700/50 backdrop-blur-sm p-8 sm:p-10 rounded-2xl">
+              <div className="text-center mb-8 sm:mb-10">
                 <motion.div 
-                  className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
+                  className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-white">
-                    3+
-                  </span>
+                  <span className="text-white">3+</span>
                 </motion.div>
-                <p className="text-cyan-400 text-lg sm:text-xl font-semibold">Anos de Experiência</p>
+                <p className="text-cyan-400 text-xl sm:text-2xl font-semibold">Anos de Experiência</p>
               </div>
               
-              <div className="grid grid-cols-3 gap-4 sm:gap-6 text-center">
+              <div className="grid grid-cols-3 gap-6 sm:gap-8 text-center">
                 {stats.slice(1).map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -125,8 +122,8 @@ const About = () => {
                     transition={{ delay: 0.6 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="text-xl sm:text-2xl font-bold text-white mb-2">{stat.number}</div>
-                    <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white mb-3">{stat.number}</div>
+                    <div className="text-sm sm:text-base text-gray-400">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
