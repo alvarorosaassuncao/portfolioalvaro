@@ -3,6 +3,7 @@ import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import ParticleBackground from './ParticleBackground';
+import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
   return (
@@ -29,9 +30,9 @@ const Hero = () => {
             Olá, me chamo
           </motion.p>
 
-          {/* Main Name - com mais espaçamento do menu */}
+          {/* Main Name - com espaçamento reduzido */}
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12 sm:mb-16 md:mb-20"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 md:mb-10"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -39,21 +40,40 @@ const Hero = () => {
             <span className="silver-title">Alvaro Assunção</span>
           </motion.h1>
           
-          {/* Professional Description */}
+          {/* Professional Description com typewriter effect e espaçamento reduzido */}
           <motion.div 
-            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide text-gray-300 mb-8 sm:mb-12 space-y-3 sm:space-y-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide text-gray-300 mb-8 sm:mb-12 space-y-1 sm:space-y-2 leading-tight"
             style={{ 
               fontFamily: "'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace",
               fontWeight: 300,
-              letterSpacing: '0.05em'
+              letterSpacing: '0.05em',
+              lineHeight: '1.3'
             }}
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <div>Engenheiro de Software</div>
-            <div>Full Stack Developer especializado em soluções AI</div>
-            <div>Analista de Dados</div>
+            <div>
+              <TypewriterEffect 
+                text="Engenheiro de Software" 
+                speed={100} 
+                delay={1500}
+              />
+            </div>
+            <div>
+              <TypewriterEffect 
+                text="Full Stack Developer especializado em soluções AI" 
+                speed={80} 
+                delay={3000}
+              />
+            </div>
+            <div>
+              <TypewriterEffect 
+                text="Analista de Dados" 
+                speed={100} 
+                delay={6000}
+              />
+            </div>
           </motion.div>
           
           {/* Description */}
