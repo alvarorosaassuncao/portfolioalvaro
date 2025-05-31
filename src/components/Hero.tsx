@@ -6,7 +6,7 @@ import ParticleBackground from './ParticleBackground';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden mb-16 md:mb-24">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24">
       <ParticleBackground />
       
       {/* Background gradient overlay */}
@@ -19,9 +19,9 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Greeting */}
+          {/* Greeting - com mais espaçamento do topo */}
           <motion.p 
-            className="text-cyan-400 text-base sm:text-lg md:text-xl mb-4 sm:mb-6"
+            className="text-cyan-400 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 pt-8 md:pt-12"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -29,9 +29,9 @@ const Hero = () => {
             Olá, me chamo
           </motion.p>
 
-          {/* Main Name - Both parts with same formatting */}
+          {/* Main Name - com mais espaçamento do menu */}
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 sm:mb-12"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12 sm:mb-16 md:mb-20"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -39,7 +39,7 @@ const Hero = () => {
             <span className="silver-title">Alvaro Assunção</span>
           </motion.h1>
           
-          {/* Professional Description - Increased font size */}
+          {/* Professional Description */}
           <motion.div 
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide text-gray-300 mb-8 sm:mb-12 space-y-3 sm:space-y-4"
             style={{ 
@@ -56,7 +56,7 @@ const Hero = () => {
             <div>Analista de Dados</div>
           </motion.div>
           
-          {/* Description - Updated content */}
+          {/* Description */}
           <motion.p 
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed"
             initial={{ x: 100, opacity: 0 }}
@@ -68,7 +68,7 @@ const Hero = () => {
             soluções inovadoras que impactem positivamente o mundo digital.
           </motion.p>
 
-          {/* CTA Buttons - Both buttons side by side */}
+          {/* CTA Buttons */}
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center mb-20 sm:mb-28 md:mb-36"
             initial={{ y: 50, opacity: 0 }}
@@ -92,7 +92,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator - Better centering */}
+      {/* Scroll Indicator */}
       <motion.div 
         className="absolute bottom-8 sm:bottom-10 md:bottom-12 left-1/2 transform -translate-x-1/2 cursor-pointer flex flex-col items-center"
         animate={{ y: [0, 10, 0] }}
