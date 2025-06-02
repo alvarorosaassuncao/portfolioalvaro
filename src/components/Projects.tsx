@@ -1,3 +1,4 @@
+
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -74,7 +75,7 @@ const Projects = () => {
       subtitle: "DESENVOLVIMENTO WEB",
       description: "Plataforma e-commerce desenvolvida para venda de cestas de café da manhã artesanais, com sistema de pedidos online, catálogo interativo e interface moderna para proporcionar experiência premium aos clientes.",
       category: "Desenvolvimento Web",
-      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/40a7b098-4225-4d5f-85e0-a413e1455339.png",
       technologies: ["React", "JavaScript", "CSS3", "HTML5"],
       githubUrl: "https://detalie.netlify.app"
     },
@@ -83,7 +84,7 @@ const Projects = () => {
       subtitle: "SISTEMA WEB GOVERNAMENTAL",
       description: "Sistema web desenvolvido para gerenciamento de denúncias e solicitações da população, permitindo que cidadãos reportem problemas urbanos e acompanhem o andamento das soluções pela prefeitura.",
       category: "Desenvolvimento Web",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/7ebd36d5-fcc8-4c92-9f21-3ee206ef201c.png",
       technologies: ["React", "Node.js", "CSS3", "JavaScript"],
       githubUrl: "https://reporta-pirapetinga.netlify.app"
     },
@@ -92,7 +93,7 @@ const Projects = () => {
       subtitle: "LANDING PAGE EDUCACIONAL",
       description: "Landing page otimizada para conversão, desenvolvida para promover e vender um e-book sobre Agentes de Inteligência Artificial para iniciantes, com design persuasivo e call-to-actions estratégicos.",
       category: "Desenvolvimento Web",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/726f3c28-0686-4c58-82c1-56747b169121.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "https://guia-definitivo-agentes-ia-para-inici.netlify.app/"
     },
