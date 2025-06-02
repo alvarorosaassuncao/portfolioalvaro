@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('IA & Automação');
   
-  const filters = ['IA & Automação', 'Dashboards & BI', 'Análise Preditiva', 'Web Scraping'];
+  const filters = ['IA & Automação', 'Dashboards & BI', 'Desenvolvimento Web', 'Web Scraping'];
   
   const projects = [
     // IA & Automação Projects
@@ -69,33 +69,33 @@ const Projects = () => {
       githubUrl: "https://github.com/alvaroassuncao"
     },
 
-    // Análise Preditiva Projects
+    // Desenvolvimento Web Projects
     {
-      title: "APLICAÇÃO STREAMLIT PARA ANÁLISE PREDITIVA",
-      subtitle: "MACHINE LEARNING",
-      description: "Modelos de Machine Learning para predição de falhas industriais, com interface Streamlit e algoritmos avançados de classificação.",
-      category: "Análise Preditiva",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Streamlit", "Scikit-learn", "Pandas"],
-      githubUrl: "https://github.com/alvaroassuncao"
+      title: "DETALIE - PLATAFORMA DIGITAL",
+      subtitle: "DESENVOLVIMENTO WEB",
+      description: "Plataforma web completa desenvolvida com tecnologias modernas, oferecendo uma experiência de usuário intuitiva e design responsivo.",
+      category: "Desenvolvimento Web",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop&crop=center",
+      technologies: ["React", "JavaScript", "CSS3", "HTML5"],
+      githubUrl: "https://detalie.netlify.app"
     },
     {
-      title: "MODELO PREDITIVO DE MANUTENÇÃO",
-      subtitle: "MACHINE LEARNING",
-      description: "Sistema de predição de falhas em equipamentos industriais usando algoritmos de ML, reduzindo downtime e otimizando manutenção preventiva.",
-      category: "Análise Preditiva",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Random Forest", "XGBoost", "Apache Spark"],
-      githubUrl: "https://github.com/alvaroassuncao"
-    },
-    {
-      title: "ANÁLISE DE PERFORMANCE OPERACIONAL",
-      subtitle: "DATA SCIENCE",
-      description: "Análise avançada de performance operacional com modelos estatísticos e visualizações interativas para otimização de processos industriais.",
-      category: "Análise Preditiva",
+      title: "REPORTA PIRAPETINGA",
+      subtitle: "SISTEMA WEB",
+      description: "Sistema web desenvolvido para gerenciamento e relatórios, com interface moderna e funcionalidades avançadas para controle de dados.",
+      category: "Desenvolvimento Web",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Pandas", "NumPy", "Matplotlib"],
-      githubUrl: "https://github.com/alvaroassuncao"
+      technologies: ["React", "Node.js", "CSS3", "JavaScript"],
+      githubUrl: "https://reporta-pirapetinga.netlify.app"
+    },
+    {
+      title: "GUIA DEFINITIVO - AGENTES IA",
+      subtitle: "APLICAÇÃO WEB EDUCACIONAL",
+      description: "Plataforma educacional completa sobre Agentes de IA para iniciantes, com conteúdo interativo e design moderno para facilitar o aprendizado.",
+      category: "Desenvolvimento Web",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      githubUrl: "https://guia-definitivo-agentes-ia-para-inici.netlify.app/"
     },
 
     // Web Scraping Projects
@@ -242,7 +242,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="modern-button w-full text-white font-semibold py-3 px-6 text-center block hover:no-underline"
                   >
-                    Ver Detalhes
+                    {project.category === 'Desenvolvimento Web' ? 'Ver Site' : 'Ver Detalhes'}
                   </a>
                 </div>
               </Card>
