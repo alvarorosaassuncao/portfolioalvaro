@@ -1,4 +1,3 @@
-
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -16,7 +15,7 @@ const Projects = () => {
       subtitle: "INTELIGÊNCIA ARTIFICIAL",
       description: "Sistema web com LLMs (OpenAI/Claude) para análise automatizada de documentos técnicos, processamento de linguagem natural e automação inteligente de processos.",
       category: "IA & Automação",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop&crop=center&overlay=000000&overlay-opacity=70&txt=Em%20Desenvolvimento&txt-size=32&txt-color=ffffff&txt-align=center",
       technologies: ["Python", "OpenAI", "Claude", "Streamlit"],
       githubUrl: "https://github.com/alvarorosaassuncao",
       featured: true
@@ -26,7 +25,7 @@ const Projects = () => {
       subtitle: "AUTOMAÇÃO INTELIGENTE",
       description: "Automatização de 80% das rotinas manuais usando Python e Streamlit, com integração SharePoint impactando +500 usuários.",
       category: "IA & Automação", 
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=200&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop&crop=center&overlay=000000&overlay-opacity=70&txt=Em%20Desenvolvimento&txt-size=32&txt-color=ffffff&txt-align=center",
       technologies: ["Python", "Streamlit", "SharePoint", "Power Automate"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -35,7 +34,7 @@ const Projects = () => {
       subtitle: "DESENVOLVIMENTO LOW-CODE",
       description: "Desenvolvimento de aplicativo no Power Apps que aumentou a produtividade em 35%, com integração completa ao ecossistema Microsoft.",
       category: "IA & Automação",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop&crop=center&overlay=000000&overlay-opacity=70&txt=Em%20Desenvolvimento&txt-size=32&txt-color=ffffff&txt-align=center",
       technologies: ["Power Apps", "Power Automate", "SharePoint", "SQL"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
