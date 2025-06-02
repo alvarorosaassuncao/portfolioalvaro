@@ -1,4 +1,3 @@
-
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -71,29 +70,29 @@ const Projects = () => {
 
     // Desenvolvimento Web Projects
     {
-      title: "DETALIE - PLATAFORMA DIGITAL",
+      title: "DETALIE - E-COMMERCE DE CESTAS GOURMET",
       subtitle: "DESENVOLVIMENTO WEB",
-      description: "Plataforma web completa desenvolvida com tecnologias modernas, oferecendo uma experiência de usuário intuitiva e design responsivo.",
+      description: "Plataforma e-commerce desenvolvida para venda de cestas de café da manhã artesanais, com sistema de pedidos online, catálogo interativo e interface moderna para proporcionar experiência premium aos clientes.",
       category: "Desenvolvimento Web",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=200&fit=crop&crop=center",
       technologies: ["React", "JavaScript", "CSS3", "HTML5"],
       githubUrl: "https://detalie.netlify.app"
     },
     {
-      title: "REPORTA PIRAPETINGA",
-      subtitle: "SISTEMA WEB",
-      description: "Sistema web desenvolvido para gerenciamento e relatórios, com interface moderna e funcionalidades avançadas para controle de dados.",
+      title: "REPORTA PIRAPETINGA - GESTÃO CIDADÃ",
+      subtitle: "SISTEMA WEB GOVERNAMENTAL",
+      description: "Sistema web desenvolvido para gerenciamento de denúncias e solicitações da população, permitindo que cidadãos reportem problemas urbanos e acompanhem o andamento das soluções pela prefeitura.",
       category: "Desenvolvimento Web",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=200&fit=crop&crop=center",
       technologies: ["React", "Node.js", "CSS3", "JavaScript"],
       githubUrl: "https://reporta-pirapetinga.netlify.app"
     },
     {
       title: "GUIA DEFINITIVO - AGENTES IA",
-      subtitle: "APLICAÇÃO WEB EDUCACIONAL",
-      description: "Plataforma educacional completa sobre Agentes de IA para iniciantes, com conteúdo interativo e design moderno para facilitar o aprendizado.",
+      subtitle: "LANDING PAGE EDUCACIONAL",
+      description: "Landing page otimizada para conversão, desenvolvida para promover e vender um e-book sobre Agentes de Inteligência Artificial para iniciantes, com design persuasivo e call-to-actions estratégicos.",
       category: "Desenvolvimento Web",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop&crop=center",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "https://guia-definitivo-agentes-ia-para-inici.netlify.app/"
     },
