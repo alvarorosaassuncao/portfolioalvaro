@@ -6,7 +6,7 @@ import ParticleBackground from './ParticleBackground';
 import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
-  const fullText = "Engenheiro de Software\nFull Stack Developer especializado em soluções AI\nAnalista de Dados";
+  const fullText = "Engenheiro de Software\nFull Stack Developer especializado em IA\nAnálise de Dados • Automação • LLMs";
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24">
@@ -69,9 +69,9 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            Sou Engenheiro de software apaixonado por Tecnologia e Inteligência artificial, 
-            sempre em busca de transformar dados complexos em insights valiosos e criar 
-            soluções inovadoras que impactem positivamente o mundo digital.
+            Especialista em soluções inteligentes com IA e análise de dados, transformando 
+            processos complexos em automações eficientes. Com 3+ anos de experiência no setor 
+            de O&G, criei sistemas que impactaram +500 usuários e reduziram custos operacionais significativamente.
           </motion.p>
 
           {/* CTA Buttons */}

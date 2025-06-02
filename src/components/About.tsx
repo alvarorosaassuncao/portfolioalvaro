@@ -1,3 +1,4 @@
+
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
@@ -5,18 +6,18 @@ import { CheckCircle2 } from 'lucide-react';
 const About = () => {
   const stats = [
     { number: "3+", label: "Anos de Experiência" },
-    { number: "40+", label: "Projetos" },
-    { number: "15+", label: "Clientes" },
-    { number: "8+", label: "Ferramentas" }
+    { number: "15+", label: "Dashboards Power BI" },
+    { number: "500+", label: "Usuários Impactados" },
+    { number: "80%", label: "Automação Alcançada" }
   ];
 
   const skills = [
-    "Análise Exploratória",
-    "Visualização de Dados", 
+    "Análise de Dados",
+    "Inteligência Artificial", 
+    "Automação de Processos",
+    "Desenvolvimento Web",
     "Machine Learning",
-    "Business Intelligence",
-    "Processo de ETL",
-    "Estatística Avançada"
+    "Power BI & Dashboards"
   ];
 
   return (
@@ -46,7 +47,7 @@ const About = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 items-start max-w-6xl mx-auto">
-          {/* Left Content - Simplified */}
+          {/* Left Content - Updated */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,21 +57,18 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Como <span className="text-blue-400 font-semibold">Analista de Dados</span>, minha paixão está em transformar conjuntos 
-                de dados complexos em insights estratégicos que impulsionam decisões 
-                de negócios.
+                Sou <span className="text-blue-400 font-semibold">Engenheiro de Software e Full Stack Developer</span> especializado 
+                em IA, com foco em Análise de Dados, Automação e Desenvolvimento Web.
               </p>
               
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Com experiência em diversos projetos, desenvolvi habilidades 
-                avançadas em análise estatística, visualização de dados, construção de 
-                modelos preditivos e processo de ETL.
+                Com <span className="text-cyan-400 font-semibold">3+ anos de experiência no setor de O&G (Petrobras)</span>, 
+                criei soluções inteligentes e inovadoras com LLMs e IA, transformando dados brutos em insights estratégicos.
               </p>
               
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Busco constantemente aprimorar meus conhecimentos em novas 
-                tecnologias e metodologias de análise, sempre com o objetivo de 
-                entregar resultados de alto valor para as organizações.
+                Minha especialidade está em otimizar processos e reduzir custos operacionais através de 
+                automação inteligente e análise avançada de dados.
               </p>
             </div>
 

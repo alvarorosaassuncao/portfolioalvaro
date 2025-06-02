@@ -7,27 +7,27 @@ const Experience = () => {
   const experiences = [
     {
       company: "TATA CONSULTANCY SERVICE",
-      position: "Analista de Dados Sênior", 
-      period: "2023 - Atualmente",
-      location: "Free Lancer",
-      description: "Desenvolvi análises estatísticas e relatórios para departamentos internos e empresas de diversos setores. Construção e implementação de uma nova solução de data warehouse, data lake. Migração de banco de dados para Nuvem. Otimização de consultas SQL que melhoraram o tempo de processamento em mais de 40%. Desenvolvimento de modelos preditivos para previsão de vendas com 92% de precisão, economizando até R$100 mil em estoque.",
+      position: "Analista de Dados Pleno", 
+      period: "Mar/2022 - Nov/2024",
+      location: "Remoto - Cliente: Petrobras",
+      description: "Desenvolvi +15 dashboards no Power BI, reduzindo 40% do tempo de análise gerencial. Criei sistemas web com LLMs (OpenAI/Claude) para automação inteligente de processos e análise de dados. Automatizei 80% das rotinas manuais com soluções Python/Streamlit. Liderei a migração de dados para SharePoint, impactando +500 usuários com 99.9% de integridade. Desenvolvi um aplicativo avançado no Power Apps, aumentando a produtividade em 35%.",
       icon: "💼"
     },
     {
-      company: "TECNVOLT ENGENHARIA",
-      position: "Analista Financeiro",
-      period: "2017 - Atualmente", 
-      location: "Free Lancer",
-      description: "Construção de robôs para automação de análise no mercado financeiro, ministro um curso para análise avançada de preço e volume de mercado.",
+      company: "TECNOVOLT ENGENHARIA",
+      position: "Planejador Mecatrônico",
+      period: "Nov/2021 - Fev/2022", 
+      location: "Macaé, RJ - Cliente: Petrobras UN-BC",
+      description: "Automação industrial com programação Ladder. Monitoramento ZABBIX para alta disponibilidade de sistemas. ERP SAP PM para gestão eficiente de manutenção.",
       icon: "📊"
     },
     {
-      company: "Colégio Valdemar Alcântara",
-      position: "Analista de Sistemas",
-      period: "2019 - 2020",
-      location: "Colégio Valdemar Alcântara",
-      description: "Liderei uma equipe de T.I. Desenvolvi soluções para Backup, agilidade do sistema, monitoramento de sistema CFTV, resolução de problemas de rede, criação de estrutura de rede complexa, manutenção de computadores.",
-      icon: "🏫"
+      company: "COPAPA CIA PADUANA DE PAPÉIS",
+      position: "Técnico Eletricista de Manutenção",
+      period: "Nov/2018 - Nov/2021",
+      location: "Santo Antônio de Pádua, RJ",
+      description: "Manutenção preventiva/corretiva de sistemas elétricos industriais. Diagnóstico avançado de falhas para redução de downtime operacional.",
+      icon: "🏭"
     }
   ];
 

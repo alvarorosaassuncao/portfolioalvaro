@@ -1,128 +1,129 @@
+
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('Machine Learning');
+  const [activeFilter, setActiveFilter] = useState('IA & Automação');
   
-  const filters = ['Machine Learning', 'Business Intelligence', 'Análise Estatística', 'NLP'];
+  const filters = ['IA & Automação', 'Dashboards & BI', 'Análise Preditiva', 'Web Scraping'];
   
   const projects = [
-    // Machine Learning Projects
+    // IA & Automação Projects
     {
-      title: "PREDIÇÃO DE VENDAS",
-      subtitle: "MACHINE LEARNING",
-      description: "Modelo preditivo para prever vendas futuras utilizando algoritmos de regressão e séries temporais.",
-      category: "Machine Learning",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Scikit-learn", "TensorFlow", "Pandas"],
+      title: "PLATAFORMA WEB COM IA INTEGRADA",
+      subtitle: "INTELIGÊNCIA ARTIFICIAL",
+      description: "Sistema web com LLMs (OpenAI/Claude) para análise automatizada de documentos técnicos, processamento de linguagem natural e automação inteligente de processos.",
+      category: "IA & Automação",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "OpenAI", "Claude", "Streamlit"],
       githubUrl: "https://github.com/alvaroassuncao",
       featured: true
     },
     {
-      title: "DETECÇÃO DE FRAUDES",
-      subtitle: "MACHINE LEARNING",
-      description: "Sistema de detecção de fraudes em tempo real usando algoritmos de classificação e anomaly detection.",
-      category: "Machine Learning", 
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Random Forest", "XGBoost", "Pandas"],
+      title: "AUTOMAÇÃO DE PROCESSOS - PETROBRAS",
+      subtitle: "AUTOMAÇÃO INTELIGENTE",
+      description: "Automatização de 80% das rotinas manuais usando Python e Streamlit, com integração SharePoint impactando +500 usuários.",
+      category: "IA & Automação", 
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "Streamlit", "SharePoint", "Power Automate"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
     {
-      title: "SEGMENTAÇÃO DE CLIENTES",
-      subtitle: "MACHINE LEARNING",
-      description: "Análise de clustering para segmentação de clientes baseada em comportamento de compra.",
-      category: "Machine Learning",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "K-Means", "PCA", "Matplotlib"],
+      title: "APLICATIVO POWER APPS AVANÇADO",
+      subtitle: "DESENVOLVIMENTO LOW-CODE",
+      description: "Desenvolvimento de aplicativo no Power Apps que aumentou a produtividade em 35%, com integração completa ao ecossistema Microsoft.",
+      category: "IA & Automação",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Power Apps", "Power Automate", "SharePoint", "SQL"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
 
-    // Business Intelligence Projects
+    // Dashboards & BI Projects
     {
-      title: "DASHBOARD EXECUTIVO",
+      title: "DASHBOARD EXECUTIVO - PETROBRAS",
       subtitle: "BUSINESS INTELLIGENCE",
-      description: "Dashboard interativo para acompanhamento de KPIs e métricas de negócio em tempo real.",
-      category: "Business Intelligence",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
+      description: "Dashboard executivo que reduziu 30% no tempo de tomada de decisão, com análise em tempo real de KPIs e métricas estratégicas.",
+      category: "Dashboards & BI",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Power BI", "SQL Server", "DAX", "Python"],
+      githubUrl: "https://github.com/alvaroassuncao"
+    },
+    {
+      title: "SUITE DE DASHBOARDS GERENCIAIS",
+      subtitle: "BUSINESS INTELLIGENCE",
+      description: "Desenvolvimento de +15 dashboards no Power BI, reduzindo 40% do tempo de análise gerencial com visualizações interativas e insights automatizados.",
+      category: "Dashboards & BI",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center",
       technologies: ["Power BI", "SQL Server", "DAX", "Excel"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
     {
-      title: "ANÁLISE DE PERFORMANCE",
-      subtitle: "BUSINESS INTELLIGENCE",
-      description: "Sistema de BI para análise de performance de vendas e identificação de oportunidades.",
-      category: "Business Intelligence",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Tableau", "PostgreSQL", "Python", "Excel"],
-      githubUrl: "https://github.com/alvaroassuncao"
-    },
-    {
-      title: "RELATÓRIOS AUTOMATIZADOS",
-      subtitle: "BUSINESS INTELLIGENCE",
-      description: "Automação de relatórios gerenciais com atualização automática de dados e distribuição.",
-      category: "Business Intelligence",
+      title: "MIGRAÇÃO DE DADOS SHAREPOINT",
+      subtitle: "INTEGRAÇÃO DE DADOS",
+      description: "Liderança na migração de dados para SharePoint com 99.9% de integridade, impactando +500 usuários e modernizando a infraestrutura de dados.",
+      category: "Dashboards & BI",
       image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Power BI", "Power Automate", "SharePoint", "SQL"],
+      technologies: ["SharePoint", "SQL Server", "Power Automate", "Python"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
 
-    // Análise Estatística Projects
+    // Análise Preditiva Projects
     {
-      title: "TESTE A/B MARKETING",
-      subtitle: "ANÁLISE ESTATÍSTICA",
-      description: "Análise estatística de testes A/B para otimização de campanhas de marketing digital.",
-      category: "Análise Estatística",
-      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400&h=200&fit=crop&crop=center",
-      technologies: ["R", "Python", "Scipy", "Plotly"],
+      title: "APLICAÇÃO STREAMLIT PARA ANÁLISE PREDITIVA",
+      subtitle: "MACHINE LEARNING",
+      description: "Modelos de Machine Learning para predição de falhas industriais, com interface Streamlit e algoritmos avançados de classificação.",
+      category: "Análise Preditiva",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "Streamlit", "Scikit-learn", "Pandas"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
     {
-      title: "ANÁLISE DE SATISFAÇÃO",
-      subtitle: "ANÁLISE ESTATÍSTICA",
-      description: "Estudo estatístico sobre satisfação do cliente usando análise de regressão múltipla.",
-      category: "Análise Estatística",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=200&fit=crop&crop=center",
-      technologies: ["SPSS", "R", "Excel", "Survey Monkey"],
+      title: "MODELO PREDITIVO DE MANUTENÇÃO",
+      subtitle: "MACHINE LEARNING",
+      description: "Sistema de predição de falhas em equipamentos industriais usando algoritmos de ML, reduzindo downtime e otimizando manutenção preventiva.",
+      category: "Análise Preditiva",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop&crop=center",
+      technologies: ["Python", "Random Forest", "XGBoost", "Apache Spark"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
     {
-      title: "PREVISÃO DE DEMANDA",
-      subtitle: "ANÁLISE ESTATÍSTICA",
-      description: "Modelo estatístico para previsão de demanda usando análise de séries temporais.",
-      category: "Análise Estatística",
+      title: "ANÁLISE DE PERFORMANCE OPERACIONAL",
+      subtitle: "DATA SCIENCE",
+      description: "Análise avançada de performance operacional com modelos estatísticos e visualizações interativas para otimização de processos industriais.",
+      category: "Análise Preditiva",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
-      technologies: ["R", "ARIMA", "Prophet", "ggplot2"],
+      technologies: ["Python", "Pandas", "NumPy", "Matplotlib"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
 
-    // NLP Projects
+    // Web Scraping Projects
     {
-      title: "ANÁLISE DE SENTIMENTOS",
-      subtitle: "PROCESSAMENTO DE LINGUAGEM NATURAL",
-      description: "Sistema de análise de sentimentos em redes sociais para monitoramento de marca.",
-      category: "NLP",
+      title: "SISTEMA DE WEB SCRAPING AUTOMATIZADO",
+      subtitle: "AUTOMAÇÃO DE DADOS",
+      description: "Pipeline automatizado de extração de dados para Power BI com selenium e python, processando milhares de registros diariamente.",
+      category: "Web Scraping",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "NLTK", "spaCy", "Transformers"],
+      technologies: ["Python", "Selenium", "BeautifulSoup", "Power BI"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
     {
-      title: "CHATBOT INTELIGENTE",
-      subtitle: "PROCESSAMENTO DE LINGUAGEM NATURAL",
-      description: "Desenvolvimento de chatbot para atendimento ao cliente usando modelos de linguagem.",
-      category: "NLP",
+      title: "EXTRAÇÃO DE DADOS REGULATÓRIOS",
+      subtitle: "WEB SCRAPING",
+      description: "Sistema automatizado para extração de dados de órgãos reguladores, com processamento em tempo real e integração com dashboards.",
+      category: "Web Scraping",
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "Rasa", "BERT", "Flask"],
+      technologies: ["Python", "Selenium", "Pandas", "SQL Server"],
       githubUrl: "https://github.com/alvaroassuncao"
     },
     {
-      title: "CLASSIFICAÇÃO DE TEXTOS",
-      subtitle: "PROCESSAMENTO DE LINGUAGEM NATURAL",
-      description: "Sistema automático de classificação de documentos e emails usando técnicas de NLP.",
-      category: "NLP",
+      title: "MONITORAMENTO DE DADOS EXTERNOS",
+      subtitle: "AUTOMAÇÃO & INTEGRAÇÃO",
+      description: "Sistema de monitoramento contínuo de fontes de dados externas com alertas automáticos e integração com sistemas internos.",
+      category: "Web Scraping",
       image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Python", "scikit-learn", "Word2Vec", "TF-IDF"],
+      technologies: ["Python", "Requests", "MongoDB", "Docker"],
       githubUrl: "https://github.com/alvaroassuncao"
     }
   ];
@@ -143,11 +144,11 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title">
-            Meus Projetos
+            Projetos Destacados
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Alguns dos projetos de análise de dados mais impactantes que desenvolvi,
-            demonstrando diferentes habilidades e tecnologias.
+            Alguns dos projetos mais impactantes que desenvolvi, demonstrando expertise em 
+            IA, automação, análise de dados e desenvolvimento de soluções inovadoras.
           </p>
         </motion.div>
 

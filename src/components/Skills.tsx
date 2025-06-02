@@ -4,31 +4,31 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skillBars = [
-    { name: "Python", level: 90, color: "from-blue-500 to-blue-600" },
-    { name: "SQL", level: 98, color: "from-purple-500 to-purple-600" },
-    { name: "Django", level: 95, color: "from-cyan-500 to-cyan-600" },
-    { name: "Power BI", level: 100, color: "from-purple-500 to-purple-600" },
-    { name: "Flask", level: 100, color: "from-purple-500 to-purple-600" },
-    { name: "Excel Avançado", level: 93, color: "from-cyan-500 to-cyan-600" },
-    { name: "Machine Learning", level: 80, color: "from-purple-500 to-purple-600" },
-    { name: "Estatística", level: 95, color: "from-cyan-500 to-cyan-600" },
-    { name: "Big Data (Spark)", level: 60, color: "from-cyan-500 to-cyan-600" },
-    { name: "JavaScript", level: 65, color: "from-purple-500 to-purple-600" }
+    { name: "Python", level: 95, color: "from-blue-500 to-blue-600" },
+    { name: "Power BI", level: 98, color: "from-purple-500 to-purple-600" },
+    { name: "SQL Server", level: 90, color: "from-cyan-500 to-cyan-600" },
+    { name: "Machine Learning", level: 85, color: "from-purple-500 to-purple-600" },
+    { name: "Django/Flask", level: 88, color: "from-blue-500 to-blue-600" },
+    { name: "LLMs (OpenAI/Claude)", level: 90, color: "from-cyan-500 to-cyan-600" },
+    { name: "Streamlit", level: 95, color: "from-purple-500 to-purple-600" },
+    { name: "Power Apps", level: 85, color: "from-cyan-500 to-cyan-600" },
+    { name: "SharePoint", level: 80, color: "from-blue-500 to-blue-600" },
+    { name: "Apache Spark", level: 70, color: "from-purple-500 to-purple-600" }
   ];
 
   const techIcons = [
     { name: "Python", icon: "🐍" },
-    { name: "Pandas", icon: "🐼" },
-    { name: "NumPy", icon: "📊" },
-    { name: "Scikit-learn", icon: "🤖" },
-    { name: "TensorFlow", icon: "🧠" },
-    { name: "Git", icon: "📝" },
-    { name: "SQL", icon: "🗃️" },
     { name: "Power BI", icon: "📈" },
+    { name: "SQL Server", icon: "🗃️" },
+    { name: "MongoDB", icon: "🍃" },
+    { name: "OpenAI", icon: "🤖" },
+    { name: "Streamlit", icon: "⚡" },
     { name: "Django", icon: "🎯" },
-    { name: "Flask", icon: "⚡" },
-    { name: "Spark", icon: "✨" },
-    { name: "Excel", icon: "📋" }
+    { name: "Flask", icon: "🔥" },
+    { name: "Git/GitHub", icon: "📝" },
+    { name: "Docker", icon: "🐳" },
+    { name: "Apache Spark", icon: "✨" },
+    { name: "Power Apps", icon: "📱" }
   ];
 
   return (
@@ -45,8 +45,8 @@ const Skills = () => {
             Minhas Habilidades
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Combinação de habilidades técnicas e analíticas que me permitem transformar dados 
-            brutos em insights acionáveis e visualizações impactantes.
+            Combinação de habilidades técnicas em IA, análise de dados e desenvolvimento que me permitem criar 
+            soluções inteligentes e inovadoras para processos complexos.
           </p>
         </motion.div>
 
@@ -130,7 +130,7 @@ const Skills = () => {
         >
           <div className="text-center mb-10">
             <h3 className="text-2xl font-semibold silver-title">
-              — Ferramentas & Linguagens —
+              — Ferramentas & Tecnologias —
             </h3>
           </div>
           
