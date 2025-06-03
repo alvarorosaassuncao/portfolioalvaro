@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -6,7 +5,7 @@ import ParticleBackground from './ParticleBackground';
 import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
-  const fullText = "Engenheiro de Software\nFull Stack Developer especializado em IA\nAnálise de Dados • Automação • LLMs";
+  const fullText = "Engenheiro de Software | Analista de dados\nFull Stack Developer | LLMs Specialist";
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24">
