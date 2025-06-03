@@ -1,3 +1,4 @@
+
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -5,7 +6,7 @@ import ParticleBackground from './ParticleBackground';
 import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
-  const fullText = "Engenheiro de Software | Analista de dados\nFull Stack Developer com experiência em LLMs";
+  const fullText = "Engenheiro de Software | Analista de dados\nFull Stack Developer | LLMs Specialist";
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24">
@@ -68,7 +69,7 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            Especialista em soluções inteligentes com IA e análise de dados, transformando 
+            Soluções inteligentes com IA e análise de dados, transformando 
             processos complexos em automações eficientes. Com 3+ anos de experiência no setor 
             de O&G, criei sistemas que impactaram +500 usuários e reduziram custos operacionais significativamente.
           </motion.p>

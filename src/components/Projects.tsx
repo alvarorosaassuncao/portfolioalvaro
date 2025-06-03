@@ -1,3 +1,4 @@
+
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -54,7 +55,7 @@ const Projects = () => {
       subtitle: "BUSINESS INTELLIGENCE",
       description: "Desenvolvimento de +15 dashboards no Power BI, reduzindo 40% do tempo de análise gerencial com visualizações interativas e insights automatizados.",
       category: "Dashboards & BI",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["Power BI", "SQL Server", "DAX", "Excel"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -63,7 +64,7 @@ const Projects = () => {
       subtitle: "INTEGRAÇÃO DE DADOS",
       description: "Liderança na migração de dados para SharePoint com 99.9% de integridade, impactando +500 usuários e modernizando a infraestrutura de dados.",
       category: "Dashboards & BI",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["SharePoint", "SQL Server", "Power Automate", "Python"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -103,7 +104,7 @@ const Projects = () => {
       subtitle: "AUTOMAÇÃO DE DADOS",
       description: "Pipeline automatizado de extração de dados para Power BI com selenium e python, processando milhares de registros diariamente.",
       category: "Web Scraping",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["Python", "Selenium", "BeautifulSoup", "Power BI"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -112,7 +113,7 @@ const Projects = () => {
       subtitle: "WEB SCRAPING",
       description: "Sistema automatizado para extração de dados de órgãos reguladores, com processamento em tempo real e integração com dashboards.",
       category: "Web Scraping",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["Python", "Selenium", "Pandas", "SQL Server"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -121,7 +122,7 @@ const Projects = () => {
       subtitle: "AUTOMAÇÃO & INTEGRAÇÃO",
       description: "Sistema de monitoramento contínuo de fontes de dados externas com alertas automáticos e integração com sistemas internos.",
       category: "Web Scraping",
-      image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["Python", "Requests", "MongoDB", "Docker"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     }
@@ -166,7 +167,7 @@ const Projects = () => {
             Projetos Destacados
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Alguns dos projetos mais impactantes que desenvolvi, demonstrando expertise em 
+            Alguns dos projetos mais impactantes que desenvolvi, demonstrando experiência em 
             IA, automação, análise de dados e desenvolvimento de soluções inovadoras.
           </p>
           <div className="mt-6">
