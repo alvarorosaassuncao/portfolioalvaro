@@ -1,3 +1,4 @@
+
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
@@ -41,13 +42,13 @@ const Projects = () => {
 
     // Dashboards & BI Projects
     {
-      title: "DASHBOARD EXECUTIVO - PETROBRAS",
-      subtitle: "BUSINESS INTELLIGENCE",
-      description: "Dashboard executivo que reduziu 30% no tempo de tomada de decisão, com análise em tempo real de KPIs e métricas estratégicas.",
+      title: "DB-RH EMPRESA AI TI",
+      subtitle: "BANCO DE DADOS",
+      description: "DB-RH – Banco de dados para empresas de tecnologia da informação. Gerencie funcionários, projetos, clientes, contratos e tarefas de forma eficiente com uma estrutura organizada e otimizada para análise de dados.",
       category: "Dashboards & BI",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
-      technologies: ["Power BI", "SQL Server", "DAX", "Python"],
-      githubUrl: "https://github.com/alvarorosaassuncao"
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=200&fit=crop&crop=center",
+      technologies: ["SQL Server", "Database Design", "Data Modeling", "Analytics"],
+      githubUrl: "https://github.com/alvarorosaassuncao/DB-RH/tree/main"
     },
     {
       title: "SUITE DE DASHBOARDS GERENCIAIS",
