@@ -1,13 +1,12 @@
-
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('IA & Automação');
+  const [activeFilter, setActiveFilter] = useState('Desenvolvimento Web');
   
-  const filters = ['IA & Automação', 'Dashboards & BI', 'Desenvolvimento Web', 'Web Scraping'];
+  const filters = ['Desenvolvimento Web', 'Dashboards & BI', 'IA & Automação', 'Web Scraping'];
   
   const projects = [
     // IA & Automação Projects
