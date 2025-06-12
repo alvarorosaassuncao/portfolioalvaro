@@ -1,3 +1,4 @@
+
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 
@@ -12,7 +13,8 @@ const Skills = () => {
     { name: "Streamlit", level: 80, color: "from-purple-500 to-purple-600" },
     { name: "Power Apps", level: 77, color: "from-cyan-500 to-cyan-600" },
     { name: "SharePoint", level: 85, color: "from-blue-500 to-blue-600" },
-    { name: "Apache Spark", level: 75, color: "from-purple-500 to-purple-600" }
+    { name: "n8n", level: 70, color: "from-purple-500 to-purple-600" },
+    { name: "CI/CD", level: 59, color: "from-cyan-500 to-cyan-600" }
   ];
 
   const techIcons = [
@@ -26,7 +28,7 @@ const Skills = () => {
     { name: "Flask", icon: "🔥" },
     { name: "Git/GitHub", icon: "📝" },
     { name: "Docker", icon: "🐳" },
-    { name: "Apache Spark", icon: "✨" },
+    { name: "n8n", icon: "🔄" },
     { name: "Power Apps", icon: "📱" }
   ];
 
@@ -62,7 +64,7 @@ const Skills = () => {
               <h3 className="text-xl font-semibold mb-8 text-center silver-title">
                 — Níveis de Proficiência —
               </h3>
-              {skillBars.slice(0, 5).map((skill, index) => (
+              {skillBars.slice(0, 6).map((skill, index) => (
                 <motion.div
                   key={skill.name}
                   className="mb-8"
@@ -92,7 +94,7 @@ const Skills = () => {
               <h3 className="text-xl font-semibold mb-8 text-center silver-title">
                 — Níveis de Proficiência —
               </h3>
-              {skillBars.slice(5).map((skill, index) => (
+              {skillBars.slice(6).map((skill, index) => (
                 <motion.div
                   key={skill.name}
                   className="mb-8"

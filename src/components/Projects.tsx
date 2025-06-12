@@ -93,7 +93,7 @@ const Projects = () => {
       subtitle: "LANDING PAGE EDUCACIONAL",
       description: "Landing page otimizada para conversão, desenvolvida para promover serviços automotivos com design moderno e call-to-actions estratégicos.",
       category: "Desenvolvimento Web",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center",
+      image: "/lovable-uploads/5ae50db1-566f-4d9c-9aaa-ed2323476f21.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "https://landingpage-automuseu.netlify.app/"
     },
