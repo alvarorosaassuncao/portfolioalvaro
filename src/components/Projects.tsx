@@ -89,11 +89,11 @@ const Projects = () => {
       githubUrl: "https://reporta-pirapetinga.netlify.app"
     },
     {
-      title: "GUIA DEFINITIVO - AGENTES IA",
+      title: "AUTOMUSEU - LANDING PAGE CORPORATIVA",
       subtitle: "LANDING PAGE EDUCACIONAL",
-      description: "Landing page otimizada para conversão, desenvolvida para promover e vender um e-book sobre Agentes de Inteligência Artificial para iniciantes, com design persuasivo e call-to-actions estratégicos.",
+      description: "Landing page otimizada para conversão, desenvolvida para promover serviços automotivos com design moderno e call-to-actions estratégicos.",
       category: "Desenvolvimento Web",
-      image: "/lovable-uploads/726f3c28-0686-4c58-82c1-56747b169121.png",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "https://landingpage-automuseu.netlify.app/"
     },

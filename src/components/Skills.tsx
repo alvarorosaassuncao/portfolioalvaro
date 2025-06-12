@@ -1,19 +1,18 @@
-
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skillBars = [
-    { name: "Python", level: 95, color: "from-blue-500 to-blue-600" },
-    { name: "Power BI", level: 98, color: "from-purple-500 to-purple-600" },
-    { name: "SQL Server", level: 90, color: "from-cyan-500 to-cyan-600" },
-    { name: "Machine Learning", level: 85, color: "from-purple-500 to-purple-600" },
-    { name: "Django/Flask", level: 88, color: "from-blue-500 to-blue-600" },
-    { name: "LLMs (OpenAI/Claude)", level: 90, color: "from-cyan-500 to-cyan-600" },
-    { name: "Streamlit", level: 95, color: "from-purple-500 to-purple-600" },
-    { name: "Power Apps", level: 85, color: "from-cyan-500 to-cyan-600" },
-    { name: "SharePoint", level: 80, color: "from-blue-500 to-blue-600" },
-    { name: "Apache Spark", level: 70, color: "from-purple-500 to-purple-600" }
+    { name: "Python", level: 85, color: "from-blue-500 to-blue-600" },
+    { name: "Power BI", level: 85, color: "from-purple-500 to-purple-600" },
+    { name: "SQL Server", level: 78, color: "from-cyan-500 to-cyan-600" },
+    { name: "Machine Learning", level: 76, color: "from-purple-500 to-purple-600" },
+    { name: "Django/Flask", level: 79, color: "from-blue-500 to-blue-600" },
+    { name: "LLMs (OpenAI/Claude)", level: 85, color: "from-cyan-500 to-cyan-600" },
+    { name: "Streamlit", level: 80, color: "from-purple-500 to-purple-600" },
+    { name: "Power Apps", level: 77, color: "from-cyan-500 to-cyan-600" },
+    { name: "SharePoint", level: 85, color: "from-blue-500 to-blue-600" },
+    { name: "Apache Spark", level: 75, color: "from-purple-500 to-purple-600" }
   ];
 
   const techIcons = [
