@@ -55,7 +55,7 @@ const Projects = () => {
       subtitle: "BUSINESS INTELLIGENCE",
       description: "Desenvolvimento de +15 dashboards no Power BI, reduzindo 40% do tempo de análise gerencial com visualizações interativas e insights automatizados.",
       category: "Dashboards & BI",
-      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
+      image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Power BI", "SQL Server", "DAX", "Excel"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -64,7 +64,7 @@ const Projects = () => {
       subtitle: "INTEGRAÇÃO DE DADOS",
       description: "Liderança na migração de dados para SharePoint com 99.9% de integridade, impactando +500 usuários e modernizando a infraestrutura de dados.",
       category: "Dashboards & BI",
-      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
+      image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["SharePoint", "SQL Server", "Power Automate", "Python"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -95,7 +95,7 @@ const Projects = () => {
       category: "Desenvolvimento Web",
       image: "/lovable-uploads/726f3c28-0686-4c58-82c1-56747b169121.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      githubUrl: "https://guia-definitivo-agentes-ia-para-inici.netlify.app/"
+      githubUrl: "https://landingpage-automuseu.netlify.app/"
     },
 
     // Web Scraping Projects
@@ -104,7 +104,7 @@ const Projects = () => {
       subtitle: "AUTOMAÇÃO DE DADOS",
       description: "Pipeline automatizado de extração de dados para Power BI com selenium e python, processando milhares de registros diariamente.",
       category: "Web Scraping",
-      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
+      image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Python", "Selenium", "BeautifulSoup", "Power BI"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -113,7 +113,7 @@ const Projects = () => {
       subtitle: "WEB SCRAPING",
       description: "Sistema automatizado para extração de dados de órgãos reguladores, com processamento em tempo real e integração com dashboards.",
       category: "Web Scraping",
-      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
+      image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Python", "Selenium", "Pandas", "SQL Server"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
@@ -122,7 +122,7 @@ const Projects = () => {
       subtitle: "AUTOMAÇÃO & INTEGRAÇÃO",
       description: "Sistema de monitoramento contínuo de fontes de dados externas com alertas automáticos e integração com sistemas internos.",
       category: "Web Scraping",
-      image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
+      image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Python", "Requests", "MongoDB", "Docker"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     }
