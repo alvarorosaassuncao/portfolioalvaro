@@ -1,14 +1,11 @@
 
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('Desenvolvimento Web');
-  
-  const filters = ['Desenvolvimento Web', 'Dashboards & BI', 'IA & Automação', 'Web Scraping'];
-  
   const projects = [
     // IA & Automação Projects
     {
@@ -128,10 +125,14 @@ const Projects = () => {
     }
   ];
 
-  const filteredProjects = projects.filter(project => {
-    const matchesFilter = project.category === activeFilter;
-    return matchesFilter;
-  });
+  const getProjectsByTab = (tab: string) => {
+    if (tab === 'data-analysis') {
+      return projects.filter(project => 
+        project.category === 'Dashboards & BI' || project.category === 'Web Scraping'
+      );
+    }
+    return projects.filter(project => project.category === 'Desenvolvimento Web');
+  };
 
   // Componente para "Em Desenvolvimento"
   const DevelopmentCard = () => (
@@ -182,107 +183,185 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* Filter Buttons */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-3 rounded-full transition-all duration-300 border ${
-                activeFilter === filter
-                  ? 'modern-button text-white border-blue-500'
-                  : 'sophisticated-card text-gray-300 border-gray-600 hover:text-white'
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {activeFilter === 'IA & Automação' && filteredProjects.length === 0 ? (
-            <DevelopmentCard />
-          ) : (
-            filteredProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group"
+        {/* Tabs Navigation */}
+        <Tabs defaultValue="development" className="w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-12"
+          >
+            <TabsList className="bg-black/40 border border-gray-600 p-1">
+              <TabsTrigger 
+                value="development" 
+                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-300 hover:text-white transition-all"
               >
-                <Card className="sophisticated-card h-full relative overflow-hidden">
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-                  </div>
+                Desenvolvimento
+              </TabsTrigger>
+              <TabsTrigger 
+                value="data-analysis" 
+                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-300 hover:text-white transition-all"
+              >
+                Análise de Dados
+              </TabsTrigger>
+            </TabsList>
+          </motion.div>
 
-                  {/* Project Image */}
-                  <div className="relative z-10 mb-6 h-48 rounded-2xl overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10 p-6">
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors duration-300">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm font-medium silver-title">
-                        {project.subtitle}
-                      </p>
+          {/* Development Projects */}
+          <TabsContent value="development">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {getProjectsByTab('development').map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="group"
+                >
+                  <Card className="sophisticated-card h-full relative overflow-hidden">
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-5">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                     </div>
 
-                    <div className="mb-4">
-                      <span className="text-xs text-blue-400 font-medium bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
-                        {project.category}
-                      </span>
+                    {/* Project Image */}
+                    <div className="relative z-10 mb-6 h-48 rounded-2xl overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
 
-                    <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.technologies.map((tech) => (
-                        <span 
-                          key={tech}
-                          className="bg-gray-800/70 text-gray-300 border border-gray-600/50 hover:border-gray-500 transition-colors text-xs px-3 py-1 rounded-full"
-                        >
-                          {tech}
+                    {/* Content */}
+                    <div className="relative z-10 p-6">
+                      <div className="mb-4">
+                        <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors duration-300">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm font-medium silver-title">
+                          {project.subtitle}
+                        </p>
+                      </div>
+
+                      <div className="mb-4">
+                        <span className="text-xs text-blue-400 font-medium bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                          {project.category}
                         </span>
-                      ))}
+                      </div>
+
+                      <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                        {project.description}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.technologies.map((tech) => (
+                          <span 
+                            key={tech}
+                            className="bg-gray-800/70 text-gray-300 border border-gray-600/50 hover:border-gray-500 transition-colors text-xs px-3 py-1 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="modern-button w-full text-white font-semibold py-3 px-6 text-center block hover:no-underline"
+                      >
+                        Ver Site
+                      </a>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
+
+          {/* Data Analysis Projects */}
+          <TabsContent value="data-analysis">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {getProjectsByTab('data-analysis').map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="group"
+                >
+                  <Card className="sophisticated-card h-full relative overflow-hidden">
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-5">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                     </div>
 
-                    <a 
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="modern-button w-full text-white font-semibold py-3 px-6 text-center block hover:no-underline"
-                    >
-                      {project.category === 'Desenvolvimento Web' ? 'Ver Site' : 'Ver Detalhes'}
-                    </a>
-                  </div>
-                </Card>
-              </motion.div>
-            ))
-          )}
-        </div>
+                    {/* Project Image */}
+                    <div className="relative z-10 mb-6 h-48 rounded-2xl overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="relative z-10 p-6">
+                      <div className="mb-4">
+                        <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors duration-300">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm font-medium silver-title">
+                          {project.subtitle}
+                        </p>
+                      </div>
+
+                      <div className="mb-4">
+                        <span className="text-xs text-blue-400 font-medium bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                          {project.category}
+                        </span>
+                      </div>
+
+                      <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                        {project.description}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.technologies.map((tech) => (
+                          <span 
+                            key={tech}
+                            className="bg-gray-800/70 text-gray-300 border border-gray-600/50 hover:border-gray-500 transition-colors text-xs px-3 py-1 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="modern-button w-full text-white font-semibold py-3 px-6 text-center block hover:no-underline"
+                      >
+                        Ver Detalhes
+                      </a>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
