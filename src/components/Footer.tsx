@@ -15,15 +15,23 @@ const Footer = () => {
             Transformando dados complexos em insights valiosos e soluções impactantes para negócios.
           </p>
           
-          {/* Download CV Button */}
-          <div className="mb-6">
+          {/* Download CV Buttons */}
+          <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/curriculo.pdf" 
-              download
-              className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+              href="/lovable-uploads/6bc250c4-2cdd-4b3d-a9bb-7e78ab69410f.png" 
+              download="Alvaro_Assuncao_CV_Completo.png"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
             >
               <Download size={20} />
-              Baixar Currículo
+              CV Completo
+            </a>
+            <a 
+              href="/lovable-uploads/2d5c7482-f2b7-4dcd-8b7d-c83de1d75908.png" 
+              download="Alvaro_Assuncao_Projetos.png"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+            >
+              <Download size={20} />
+              Projetos
             </a>
           </div>
           

@@ -6,7 +6,7 @@ import ParticleBackground from './ParticleBackground';
 import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
-  const fullText = "Engenheiro de Software | Analista de dados\nDeveloper IA";
+  const fullText = "Engenheiro de Software | Analista de dados | Analista de Sistemas\nDeveloper IA";
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -125,7 +125,7 @@ const Hero = () => {
                 <div className="h-2 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full w-2/3"></div>
               </div>
               
-              {/* Stats */}
+              {/* Stats with Data Analytics Image */}
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="bg-emerald-400/10 rounded-lg p-3 text-center">
                   <div className="text-emerald-400 font-bold text-lg">500+</div>
@@ -134,6 +134,19 @@ const Hero = () => {
                 <div className="bg-cyan-400/10 rounded-lg p-3 text-center">
                   <div className="text-cyan-400 font-bold text-lg">80%</div>
                   <div className="text-gray-400 text-xs">Automação</div>
+                </div>
+              </div>
+              
+              {/* Data Analytics Highlight */}
+              <div className="mt-6 bg-gradient-to-br from-emerald-400/5 to-cyan-400/5 rounded-xl p-4 border border-emerald-400/20">
+                <img 
+                  src="src/assets/data-analytics.png" 
+                  alt="Análise de Dados e Engenharia de Dados" 
+                  className="w-full h-20 object-cover rounded-lg mb-3"
+                />
+                <div className="text-center">
+                  <div className="text-emerald-400 font-semibold text-sm">Análise & Engenharia</div>
+                  <div className="text-gray-400 text-xs">de Dados</div>
                 </div>
               </div>
             </div>

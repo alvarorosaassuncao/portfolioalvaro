@@ -55,7 +55,7 @@ const Projects = () => {
       subtitle: "BUSINESS INTELLIGENCE",
       description: "Dashboard interativo desenvolvido no Power BI para análise da evolução dos preços da gasolina no Brasil, com visualizações avançadas e insights sobre tendências de mercado.",
       category: "Dashboards & BI",
-      image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
       technologies: ["Power BI", "SQL Server", "DAX", "Excel"],
       githubUrl: "https://app.powerbi.com/view?r=eyJrIjoiYTc1ZDY2MGUtMmI5ZC00NzM0LWIzNGUtNGFmYjI1NzdmMjE1IiwidCI6IjA0NjU4YmI3LWJjYjAtNGY3My04Y2QwLTk5NzNmNDg3MWQwYiJ9"
     },
