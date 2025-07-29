@@ -1,6 +1,7 @@
 
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Database, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
 import ParticleBackground from './ParticleBackground';
 import TypewriterEffect from './TypewriterEffect';
@@ -74,6 +75,50 @@ const Hero = () => {
               processos complexos em automações eficientes. 3+ anos de experiência 
               no setor de O&G.
             </motion.p>
+
+            {/* Technologies Highlight */}
+            <motion.div 
+              className="flex flex-wrap gap-4 mb-8"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="flex items-center gap-2 bg-emerald-400/10 border border-emerald-400/20 rounded-xl px-4 py-2 hover:bg-emerald-400/20 transition-all duration-300 cursor-pointer">
+                    <span className="text-2xl">🐍</span>
+                    <span className="text-emerald-400 font-medium">Python</span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Python: linguagem versátil para automações e análise de dados</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="flex items-center gap-2 bg-cyan-400/10 border border-cyan-400/20 rounded-xl px-4 py-2 hover:bg-cyan-400/20 transition-all duration-300 cursor-pointer">
+                    <BarChart3 className="text-cyan-400" size={20} />
+                    <span className="text-cyan-400 font-medium">Power BI</span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Power BI: criação de dashboards e visualizações interativas</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="flex items-center gap-2 bg-blue-400/10 border border-blue-400/20 rounded-xl px-4 py-2 hover:bg-blue-400/20 transition-all duration-300 cursor-pointer">
+                    <Database className="text-blue-400" size={20} />
+                    <span className="text-blue-400 font-medium">SQL</span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>SQL: manipulação e análise avançada de bancos de dados</p>
+                </TooltipContent>
+              </Tooltip>
+            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div 
