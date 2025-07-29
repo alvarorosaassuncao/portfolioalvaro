@@ -192,18 +192,18 @@ const Projects = () => {
             viewport={{ once: true }}
             className="flex justify-center mb-12"
           >
-            <TabsList className="bg-black/40 border border-gray-600 p-1">
+            <TabsList className="bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-xl border border-blue-500/30 p-2 rounded-2xl shadow-2xl shadow-blue-500/20">
               <TabsTrigger 
                 value="development" 
-                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-300 hover:text-white transition-all"
+                className="relative overflow-hidden data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 text-gray-300 hover:text-white transition-all duration-500 px-8 py-3 rounded-xl font-semibold tracking-wide hover:bg-blue-600/20 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:translate-x-[-200%] data-[state=active]:before:translate-x-[200%] before:transition-transform before:duration-1000"
               >
-                Desenvolvimento
+                🚀 Desenvolvimento
               </TabsTrigger>
               <TabsTrigger 
                 value="data-analysis" 
-                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-gray-300 hover:text-white transition-all"
+                className="relative overflow-hidden data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:shadow-purple-500/50 text-gray-300 hover:text-white transition-all duration-500 px-8 py-3 rounded-xl font-semibold tracking-wide hover:bg-purple-600/20 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:translate-x-[-200%] data-[state=active]:before:translate-x-[200%] before:transition-transform before:duration-1000"
               >
-                Análise de Dados
+                📊 Análise de Dados
               </TabsTrigger>
             </TabsList>
           </motion.div>
