@@ -6,7 +6,7 @@ import ParticleBackground from './ParticleBackground';
 import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
-  const fullText = "Engenheiro de Software | Analista de dados\nFull Stack Developer | LLMs Specialist";
+  const fullText = "Engenheiro de Software | Analista de dados\nDeveloper IA";
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24">

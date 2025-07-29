@@ -57,7 +57,7 @@ const Projects = () => {
       category: "Dashboards & BI",
       image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Power BI", "SQL Server", "DAX", "Excel"],
-      githubUrl: "https://github.com/alvarorosaassuncao"
+      githubUrl: "https://app.powerbi.com/view?r=eyJrIjoiYTc1ZDY2MGUtMmI5ZC00NzM0LWIzNGUtNGFmYjI1NzdmMjE1IiwidCI6IjA0NjU4YmI3LWJjYjAtNGY3My04Y2QwLTk5NzNmNDg3MWQwYiJ9"
     },
     {
       title: "MIGRAÇÃO DE DADOS SHAREPOINT",
