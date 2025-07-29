@@ -105,50 +105,13 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="relative hidden lg:block"
           >
-            {/* Professional data visualization mockup */}
-            <div className="relative bg-gradient-to-br from-slate-800/50 to-gray-900/50 rounded-2xl p-8 backdrop-blur-sm border border-emerald-400/20">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                </div>
-                <span className="text-emerald-400 text-sm font-mono">AI Dashboard</span>
-              </div>
-              
-              {/* Chart mockup */}
-              <div className="space-y-4">
-                <div className="h-2 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full w-4/5"></div>
-                <div className="h-2 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full w-3/5"></div>
-                <div className="h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full w-4/6"></div>
-                <div className="h-2 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full w-2/3"></div>
-              </div>
-              
-              {/* Stats with Data Analytics Image */}
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="bg-emerald-400/10 rounded-lg p-3 text-center">
-                  <div className="text-emerald-400 font-bold text-lg">500+</div>
-                  <div className="text-gray-400 text-xs">Usuários</div>
-                </div>
-                <div className="bg-cyan-400/10 rounded-lg p-3 text-center">
-                  <div className="text-cyan-400 font-bold text-lg">80%</div>
-                  <div className="text-gray-400 text-xs">Automação</div>
-                </div>
-              </div>
-              
-              {/* Profile Highlight */}
-              <div className="mt-6 bg-gradient-to-br from-emerald-400/5 to-cyan-400/5 rounded-xl p-4 border border-emerald-400/20">
-                <img 
-                  src="/lovable-uploads/d3dea75f-785f-4f53-8049-33b4ee0aa0e7.png" 
-                  alt="Alvaro Assunção - Perfil Profissional" 
-                  className="w-full h-20 object-cover rounded-lg mb-3"
-                />
-                <div className="text-center">
-                  <div className="text-emerald-400 font-semibold text-sm">Alvaro Assunção</div>
-                  <div className="text-gray-400 text-xs">Profissional</div>
-                </div>
-              </div>
+            {/* Clean image display */}
+            <div className="relative bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-emerald-400/10 shadow-2xl">
+              <img 
+                src="/lovable-uploads/d3dea75f-785f-4f53-8049-33b4ee0aa0e7.png" 
+                alt="Alvaro Assunção - Perfil Profissional" 
+                className="w-full h-auto object-cover rounded-xl"
+              />
             </div>
           </motion.div>
         </div>
