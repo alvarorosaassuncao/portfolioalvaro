@@ -137,16 +137,16 @@ const Hero = () => {
                 </div>
               </div>
               
-              {/* Data Analytics Highlight */}
+              {/* Profile Highlight */}
               <div className="mt-6 bg-gradient-to-br from-emerald-400/5 to-cyan-400/5 rounded-xl p-4 border border-emerald-400/20">
                 <img 
-                  src="src/assets/data-analytics.png" 
-                  alt="Análise de Dados e Engenharia de Dados" 
+                  src="/lovable-uploads/d3dea75f-785f-4f53-8049-33b4ee0aa0e7.png" 
+                  alt="Alvaro Assunção - Perfil Profissional" 
                   className="w-full h-20 object-cover rounded-lg mb-3"
                 />
                 <div className="text-center">
-                  <div className="text-emerald-400 font-semibold text-sm">Análise & Engenharia</div>
-                  <div className="text-gray-400 text-xs">de Dados</div>
+                  <div className="text-emerald-400 font-semibold text-sm">Alvaro Assunção</div>
+                  <div className="text-gray-400 text-xs">Profissional</div>
                 </div>
               </div>
             </div>
