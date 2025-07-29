@@ -51,9 +51,9 @@ const Projects = () => {
       githubUrl: "https://github.com/alvarorosaassuncao/DB-RH/tree/main"
     },
     {
-      title: "SUITE DE DASHBOARDS GERENCIAIS",
+      title: "DASHBOARD EVOLUÇÃO DO PREÇO DA GASOLINA NO BRASIL",
       subtitle: "BUSINESS INTELLIGENCE",
-      description: "Desenvolvimento de +15 dashboards no Power BI, reduzindo 40% do tempo de análise gerencial com visualizações interativas e insights automatizados.",
+      description: "Dashboard interativo desenvolvido no Power BI para análise da evolução dos preços da gasolina no Brasil, com visualizações avançadas e insights sobre tendências de mercado.",
       category: "Dashboards & BI",
       image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Power BI", "SQL Server", "DAX", "Excel"],

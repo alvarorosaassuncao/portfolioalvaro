@@ -82,14 +82,14 @@ const Hero = () => {
             transition={{ delay: 1.5 }}
           >
             <Button 
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg md:text-xl w-full sm:w-auto rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg md:text-xl w-full sm:w-auto rounded-full transition-all duration-300 shadow-lg hover:shadow-xl border-0"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Ver Projetos
             </Button>
             <Button 
               variant="outline" 
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black py-4 sm:py-5 px-8 sm:px-10 rounded-full text-base sm:text-lg md:text-xl font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto"
+              className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 py-4 sm:py-5 px-8 sm:px-10 rounded-full text-base sm:text-lg md:text-xl font-semibold transition-all duration-300 bg-transparent w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contato

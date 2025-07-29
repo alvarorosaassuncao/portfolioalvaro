@@ -4,40 +4,42 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 210 40% 2%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3%;
+    --card: 210 40% 4%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3%;
+    --popover: 210 40% 4%;
     --popover-foreground: 0 0% 98%;
-    --primary: 182 100% 47%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 171 100% 30%;
+    --primary: 158 64% 52%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 158 64% 45%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 182 100% 47%;
-    --accent-foreground: 0 0% 98%;
+    --muted: 210 40% 10%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 158 64% 52%;
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 182 100% 47%;
-    --sidebar-background: 0 0% 2%;
+    --border: 210 40% 18%;
+    --input: 210 40% 18%;
+    --ring: 158 64% 52%;
+    --sidebar-background: 210 40% 2%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 182 100% 47%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 14%;
+    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 210 40% 10%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 14%;
-    --sidebar-ring: 182 100% 47%;
+    --sidebar-border: 210 40% 18%;
+    --sidebar-ring: 158 64% 52%;
     
-    /* Data-focused theme colors */
-    --data-primary: 182 100% 47%;
-    --data-secondary: 171 100% 30%;
-    --data-accent: 195 100% 50%;
-    --data-gradient-start: 182 100% 47%;
-    --data-gradient-end: 171 100% 30%;
+    /* Professional data theme */
+    --data-primary: 158 64% 52%;
+    --data-secondary: 158 64% 45%;
+    --data-accent: 158 64% 60%;
+    --data-gradient-start: 158 64% 52%;
+    --data-gradient-end: 158 64% 45%;
+    --data-bg-primary: 210 40% 2%;
+    --data-bg-secondary: 210 40% 4%;
   }
 }
 
@@ -48,7 +50,8 @@
 
   body {
     @apply bg-background text-foreground;
-    background: #000000;
+    background: hsl(var(--data-bg-primary));
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -70,29 +73,33 @@
     z-index: -9999 !important;
   }
 
-  /* Silver metallic gradient for titles - mais sutil */
+  /* Modern gradient text for titles */
   .silver-title {
-    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 25%, #94a3b8 50%, #64748b 75%, #475569 100%);
+    background: linear-gradient(135deg, hsl(var(--data-primary)), hsl(var(--data-accent)), #ffffff);
     background-size: 150% 150%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: silverShimmer 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 2px rgba(148, 163, 184, 0.15));
+    animation: modernShimmer 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px hsl(var(--data-primary) / 0.3));
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
   }
 
-  /* Versão mais sutil do título prateado */
+  /* Subtle version */
   .silver-title-subtle {
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 30%, #cbd5e1 50%, #94a3b8 70%, #64748b 100%);
+    background: linear-gradient(135deg, hsl(var(--data-primary)), #ffffff);
     background-size: 120% 120%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: silverShimmerSubtle 6s ease-in-out infinite;
-    filter: drop-shadow(0 0 1px rgba(148, 163, 184, 0.1));
+    animation: modernShimmerSubtle 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 4px hsl(var(--data-primary) / 0.2));
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
   }
 
-  @keyframes silverShimmer {
+  @keyframes modernShimmer {
     0%, 100% {
       background-position: 0% 50%;
     }
@@ -101,7 +108,7 @@
     }
   }
 
-  @keyframes silverShimmerSubtle {
+  @keyframes modernShimmerSubtle {
     0%, 100% {
       background-position: 0% 50%;
     }
@@ -130,26 +137,26 @@
       0 0 20px rgba(59, 130, 246, 0.1);
   }
 
-  /* Enhanced card styles */
+  /* Modern card styles */
   .sophisticated-card {
-    background: linear-gradient(145deg, rgba(15, 15, 15, 0.9), rgba(5, 5, 5, 0.95));
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 32px;
+    background: linear-gradient(145deg, hsl(var(--data-bg-secondary) / 0.8), hsl(var(--data-bg-primary) / 0.9));
+    border: 1px solid hsl(var(--data-primary) / 0.2);
+    border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 
-      0 20px 40px rgba(0, 0, 0, 0.4),
-      0 1px 0 rgba(255, 255, 255, 0.1) inset,
-      0 -1px 0 rgba(0, 0, 0, 0.3) inset;
+      0 20px 40px hsl(var(--data-bg-primary) / 0.5),
+      0 1px 0 hsl(var(--data-primary) / 0.1) inset,
+      0 0 0 1px hsl(var(--data-primary) / 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .sophisticated-card:hover {
     transform: translateY(-8px) scale(1.02);
-    border-color: rgba(59, 130, 246, 0.4);
+    border-color: hsl(var(--data-primary) / 0.4);
     box-shadow: 
-      0 32px 64px rgba(0, 0, 0, 0.5),
-      0 0 40px rgba(59, 130, 246, 0.15),
-      0 1px 0 rgba(255, 255, 255, 0.15) inset;
+      0 32px 64px hsl(var(--data-bg-primary) / 0.6),
+      0 0 40px hsl(var(--data-primary) / 0.2),
+      0 1px 0 hsl(var(--data-primary) / 0.15) inset;
   }
 
   /* Data-focused button enhancements */

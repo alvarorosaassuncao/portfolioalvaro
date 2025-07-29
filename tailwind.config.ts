@@ -20,6 +20,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
+        'inter': ['Inter', 'system-ui', 'sans-serif'],
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
         'orbitron': ['Orbitron', 'monospace'],
       },
       colors: {
