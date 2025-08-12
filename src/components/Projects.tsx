@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import sharepointMigracaoImg from '@/assets/projects/sharepoint-migracao-powerbi.jpg';
 
 const Projects = () => {
   const projects = [
@@ -59,11 +60,11 @@ const Projects = () => {
     {
       title: "MIGRAÇÃO DE DADOS SHAREPOINT",
       subtitle: "INTEGRAÇÃO DE DADOS",
-      description: "Liderança na migração de dados para SharePoint com 99.9% de integridade, impactando +500 usuários e modernizando a infraestrutura de dados.",
+      description: "Dashboard Power BI para monitorar a migração de dados do SharePoint com KPIs de volume migrado, integridade (99,9%), status por site e alertas em tempo real.",
       category: "Dashboards & BI",
-      image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
+      image: sharepointMigracaoImg,
       technologies: ["SharePoint", "SQL Server", "Power Automate", "Python"],
-      githubUrl: "https://github.com/alvarorosaassuncao"
+      githubUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjNkNjM5MzMtODQxMS00MjA1LThjNTgtMTMzYmRiNTJjMGI2IiwidCI6IjA0NjU4YmI3LWJjYjAtNGY3My04Y2QwLTk5NzNmNDg3MWQwYiJ9" 
     },
 
     // Desenvolvimento Web Projects

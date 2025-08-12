@@ -150,13 +150,14 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="relative hidden lg:block"
           >
-            {/* Clean image display */}
-            <div className="relative bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-emerald-400/10 shadow-2xl">
+            {/* Profile image - reduced, round, 3D look */}
+            <div className="relative mx-auto lg:mx-0 w-44 h-44 xl:w-56 xl:h-56 rounded-full overflow-hidden shadow-[0_20px_60px_hsl(var(--data-primary)/0.35)] ring-0 border-0 transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1">
               <img 
                 src="/lovable-uploads/d3dea75f-785f-4f53-8049-33b4ee0aa0e7.png" 
                 alt="Alvaro Assunção - Perfil Profissional" 
-                className="w-full h-auto object-cover rounded-xl"
+                className="w-full h-full object-cover rounded-full"
               />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-black/10 to-transparent" />
             </div>
           </motion.div>
         </div>
