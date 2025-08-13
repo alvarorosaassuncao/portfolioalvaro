@@ -58,7 +58,7 @@ const Projects = () => {
       githubUrl: "https://app.powerbi.com/view?r=eyJrIjoiYTc1ZDY2MGUtMmI5ZC00NzM0LWIzNGUtNGFmYjI1NzdmMjE1IiwidCI6IjA0NjU4YmI3LWJjYjAtNGY3My04Y2QwLTk5NzNmNDg3MWQwYiJ9"
     },
     {
-      title: "MIGRAÇÃO DE DADOS SHAREPOINT",
+      title: "Dashboard Análise de Vendas",
       subtitle: "INTEGRAÇÃO DE DADOS",
       description: "Dashboard Power BI para monitorar a migração de dados do SharePoint com KPIs de volume migrado, integridade (99,9%), status por site e alertas em tempo real.",
       category: "Dashboards & BI",

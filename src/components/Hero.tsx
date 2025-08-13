@@ -30,6 +30,23 @@ const Hero = () => {
             transition={{ duration: 1 }}
             className="space-y-8"
           >
+            {/* Profile image centered above name */}
+            <motion.div
+              className="flex justify-center"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full overflow-hidden shadow-[0_20px_60px_hsl(var(--data-primary)/0.35)] ring-0 border-0 transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1">
+                <img 
+                  src="/lovable-uploads/d3dea75f-785f-4f53-8049-33b4ee0aa0e7.png" 
+                  alt="Alvaro Assunção - Foto de Perfil"
+                  className="w-full h-full object-cover rounded-full"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-black/10 to-transparent" />
+              </div>
+            </motion.div>
+
             {/* Greeting */}
             <motion.p 
               className="text-emerald-400 text-lg font-medium mb-4"
@@ -143,23 +160,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Visual elements */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="relative hidden lg:block"
-          >
-            {/* Profile image - reduced, round, 3D look */}
-            <div className="relative mx-auto lg:mx-0 w-44 h-44 xl:w-56 xl:h-56 rounded-full overflow-hidden shadow-[0_20px_60px_hsl(var(--data-primary)/0.35)] ring-0 border-0 transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1">
-              <img 
-                src="/lovable-uploads/d3dea75f-785f-4f53-8049-33b4ee0aa0e7.png" 
-                alt="Alvaro Assunção - Perfil Profissional" 
-                className="w-full h-full object-cover rounded-full"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-black/10 to-transparent" />
-            </div>
-          </motion.div>
+          {/* Right side removed per request: profile image moved above name */}
         </div>
       </div>
 
