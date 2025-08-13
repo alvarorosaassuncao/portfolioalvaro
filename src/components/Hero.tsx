@@ -22,13 +22,13 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen pt-20">
+        <div className="grid grid-cols-1 gap-12 place-items-center items-center min-h-screen pt-20">
           {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="space-y-8"
+            className="space-y-8 max-w-3xl mx-auto text-center"
           >
             {/* Profile image centered above name */}
             <motion.div
@@ -49,7 +49,7 @@ const Hero = () => {
 
             {/* Greeting */}
             <motion.p 
-              className="text-emerald-400 text-lg font-medium mb-4"
+              className="text-emerald-400 text-lg font-medium mb-4 text-center"
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -59,7 +59,7 @@ const Hero = () => {
 
             {/* Main Name */}
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-left"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
@@ -69,7 +69,7 @@ const Hero = () => {
             
             {/* Professional Description */}
             <motion.div 
-              className="text-xl md:text-2xl font-light text-gray-300 mb-6 text-left"
+              className="text-xl md:text-2xl font-light text-gray-300 mb-6 text-center"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -83,7 +83,7 @@ const Hero = () => {
             
             {/* Description */}
             <motion.p 
-              className="text-lg text-gray-400 mb-8 leading-relaxed text-left max-w-lg"
+              className="text-lg text-gray-400 mb-8 leading-relaxed text-center max-w-2xl mx-auto"
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
@@ -95,7 +95,7 @@ const Hero = () => {
 
             {/* Technologies Highlight */}
             <motion.div 
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex flex-wrap gap-4 mb-8 justify-center"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -139,7 +139,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <motion.div 
-              className="flex gap-4 text-left"
+              className="flex gap-4 justify-center"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.5 }}
