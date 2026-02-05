@@ -8,8 +8,7 @@ const Footer = () => {
         {/* Main content */}
         <div className="text-center mb-8">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-            <span className="silver-title">Alvaro</span>
-            <span className="text-blue-400 ml-2">Assunção</span>
+            <span className="silver-metallic-title">Alvaro Assunção</span>
           </h3>
           <p className="text-gray-400 text-base sm:text-lg mb-6">
             Transformando dados complexos em insights valiosos e soluções impactantes para negócios.
@@ -18,8 +17,8 @@ const Footer = () => {
           {/* Download CV Buttons */}
           <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/lovable-uploads/6bc250c4-2cdd-4b3d-a9bb-7e78ab69410f.png" 
-              download="Alvaro_Assuncao_CV_Completo.png"
+              href="/cv/Curriculo_Alvaro_Assuncao.pdf" 
+              download="Curriculo_Alvaro_Assuncao.pdf"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
             >
               <Download size={20} />
