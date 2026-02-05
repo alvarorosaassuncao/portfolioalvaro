@@ -5,7 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { number: "3+", label: "Anos de Experiência" },
+    { number: "4", label: "Anos de Experiência" },
     { number: "15+", label: "Dashboards Power BI" },
     { number: "500+", label: "Usuários Impactados" },
     { number: "80%", label: "Automação Alcançada" }
@@ -62,7 +62,7 @@ const About = () => {
               </p>
               
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Com <span className="text-cyan-400 font-semibold">3+ anos de experiência no setor de O&G (Petrobras)</span>, 
+                Com <span className="text-cyan-400 font-semibold">4 anos de experiência no setor de O&G (Petrobras)</span>, 
                 criei soluções inteligentes e inovadoras com LLMs e IA, transformando dados brutos em insights estratégicos.
               </p>
               
@@ -106,7 +106,7 @@ const About = () => {
                   transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-white">3+</span>
+                  <span className="text-white">4</span>
                 </motion.div>
                 <p className="text-cyan-400 text-xl sm:text-2xl font-semibold">Anos de Experiência</p>
               </div>
