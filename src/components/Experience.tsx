@@ -6,6 +6,14 @@ import { Calendar } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
+      company: "BUS2 PLANEJAMENTO E OPERAÇÃO NA MOBILIDADE",
+      position: "Analista de Dados",
+      period: "Set/2024 - Atual",
+      location: "Remoto",
+      description: "Responsável pela análise e tratamento de grandes volumes de dados em projetos estratégicos do setor de transporte público. Desenvolvimento de pipelines ETL robustos utilizando Python (Pandas, NumPy, DuckDB). Orquestração de workflows com Apache Airflow. Consultas avançadas em Oracle SQL, containerização com Docker, e automação com KNIME. Modelagem de dados para suporte à tomada de decisão estratégica.",
+      icon: "🚌"
+    },
+    {
       company: "TATA CONSULTANCY SERVICE",
       position: "Analista de Dados Pleno", 
       period: "Mar/2022 - Nov/2024",

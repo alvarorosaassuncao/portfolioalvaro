@@ -39,7 +39,7 @@ const Hero = () => {
             >
               <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full overflow-hidden shadow-[0_20px_60px_hsl(var(--data-primary)/0.35)] ring-0 border-0 transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1">
                 <img 
-                  src="/lovable-uploads/d3dea75f-785f-4f53-8049-33b4ee0aa0e7.png" 
+                  src="/assets/profile-photo.jpg" 
                   alt="Alvaro Assunção - Foto de Perfil"
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -64,7 +64,7 @@ const Hero = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
-              <span className="silver-title">Alvaro Assunção</span>
+              <span className="silver-metallic-title">Alvaro Assunção</span>
             </motion.h1>
             
             {/* Professional Description */}
