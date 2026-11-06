@@ -7,7 +7,7 @@ import ParticleBackground from './ParticleBackground';
 import TypewriterEffect from './TypewriterEffect';
 
 const Hero = () => {
-  const fullText = "Engenheiro de Software | Analista de dados | Analista de Sistemas\nDeveloper IA";
+  const fullText = "Process & Systems Engineer | Data Analyst | Systems Analyst\nAI Developer";
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -40,7 +40,7 @@ const Hero = () => {
               <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-full overflow-hidden shadow-[0_20px_60px_hsl(var(--data-primary)/0.35)] ring-0 border-0 transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1">
                 <img 
                   src={profilePhoto} 
-                  alt="Alvaro Assunção - Foto de Perfil"
+                  alt="Alvaro Assunção - Profile Photo"
                   className="w-full h-full object-cover rounded-full"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-black/10 to-transparent" />
@@ -54,7 +54,7 @@ const Hero = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Olá, me chamo
+              Hello, my name is
             </motion.p>
 
             {/* Main Name */}
@@ -88,9 +88,9 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              Soluções inteligentes com IA e análise de dados, transformando 
-              processos complexos em automações eficientes. 4 anos de experiência 
-              no setor de O&G. Rio de Janeiro, Brasil.
+              Intelligent solutions with AI and data analysis, turning complex 
+              processes into efficient automations. 4 years of experience in the 
+              O&G sector. Santos, SP, Brazil.
             </motion.p>
 
             {/* Technologies Highlight */}
@@ -108,7 +108,7 @@ const Hero = () => {
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Python: linguagem versátil para automações e análise de dados</p>
+                  <p>Python: versatile language for automations and data analysis</p>
                 </TooltipContent>
               </Tooltip>
 
@@ -120,7 +120,7 @@ const Hero = () => {
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Power BI: criação de dashboards e visualizações interativas</p>
+                  <p>Power BI: dashboards and interactive data visualizations</p>
                 </TooltipContent>
               </Tooltip>
 
@@ -132,7 +132,7 @@ const Hero = () => {
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>SQL: manipulação e análise avançada de bancos de dados</p>
+                  <p>SQL: advanced database manipulation and analysis</p>
                 </TooltipContent>
               </Tooltip>
             </motion.div>
@@ -148,14 +148,14 @@ const Hero = () => {
                 className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold py-3 px-6 text-lg rounded-xl transition-all duration-300"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Ver Projetos
+                View Projects
               </Button>
               <Button 
                 variant="outline" 
                 className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 py-3 px-6 rounded-xl text-lg font-semibold transition-all duration-300 bg-transparent"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Contato
+                Contact
               </Button>
             </motion.div>
           </motion.div>
@@ -172,7 +172,7 @@ const Hero = () => {
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <div className="flex flex-col items-center text-gray-400">
-          <span className="text-sm mb-3">Rolar para baixo</span>
+          <span className="text-sm mb-3">Scroll down</span>
           <ArrowDown size={20} />
         </div>
       </motion.div>

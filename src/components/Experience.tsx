@@ -3,38 +3,64 @@ import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Calendar } from 'lucide-react';
 
+interface ExperienceItem {
+  company: string;
+  position: string;
+  period: string;
+  location: string;
+  description: string;
+  icon: string;
+  highlights?: string[];
+}
+
 const Experience = () => {
-  const experiences = [
+  const experiences: ExperienceItem[] = [
+    {
+      company: "ATLAS PROFESSIONALS | SBM OFFSHORE",
+      position: "Reliability Process & Systems Engineer",
+      period: "Jan 2026 - Present",
+      location: "Santos, SP - Global Reliability Team",
+      description: "Supporting SBM Offshore's global Reliability Engineering and Asset Management teams, focused on maintenance data quality, process improvement and digital transformation across offshore assets. I built the company's internal RCM (Reliability Centered Maintenance) system from the ground up, standardizing how reliability analyses are created, reviewed and tracked. I also developed digital tools that remove manual work for engineers around the world: E3 PM Action, which validates preventive maintenance actions automatically; Work Order Cancellation, which streamlined the cancellation workflow and sped up delivery for global engineers; and Failure Mode Tree, a structured tool for building and validating failure mode hierarchies. In addition, I deliver FCA load quality checks and Performance Standards review support tools, reconciling data between load files, IFS, EMS and corporate references.",
+      icon: "⚙️",
+      highlights: [
+        "Internal RCM System",
+        "E3 PM Action",
+        "Work Order Cancellation",
+        "Failure Mode Tree",
+        "FCA Load Quality Check",
+        "Performance Standards Review Tool"
+      ]
+    },
     {
       company: "BUS2 PLANEJAMENTO E OPERAÇÃO NA MOBILIDADE",
-      position: "Analista de Dados",
-      period: "Set/2024 - Atual",
-      location: "Remoto",
-      description: "Responsável pela análise e tratamento de grandes volumes de dados em projetos estratégicos do setor de transporte público. Desenvolvimento de pipelines ETL robustos utilizando Python (Pandas, NumPy, DuckDB). Orquestração de workflows com Apache Airflow. Consultas avançadas em Oracle SQL, containerização com Docker, e automação com KNIME. Modelagem de dados para suporte à tomada de decisão estratégica.",
+      position: "Data Analyst",
+      period: "Sep 2024 - Feb 2026",
+      location: "Remote",
+      description: "Responsible for analyzing and processing large data volumes in strategic public transport projects. Built robust ETL pipelines with Python (Pandas, NumPy, DuckDB), orchestrated workflows with Apache Airflow, wrote advanced Oracle SQL queries, containerized databases with Docker and automated flows with KNIME. Data modeling to support strategic decision making.",
       icon: "🚌"
     },
     {
       company: "TATA CONSULTANCY SERVICE",
-      position: "Analista de Dados Pleno", 
-      period: "Mar/2022 - Nov/2024",
-      location: "Remoto - Cliente: Petrobras",
-      description: "Desenvolvi +15 dashboards no Power BI, reduzindo 40% do tempo de análise gerencial. Criei sistemas web com LLMs (OpenAI/Claude) para automação inteligente de processos e análise de dados. Automatizei 80% das rotinas manuais com soluções Python/Streamlit. Liderei a migração de dados para SharePoint, impactando +500 usuários com 99.9% de integridade. Desenvolvi um aplicativo avançado no Power Apps, aumentando a produtividade em 35%.",
+      position: "Mid-level Data Analyst",
+      period: "Mar 2022 - Nov 2024",
+      location: "Remote - Client: Petrobras",
+      description: "I built 15+ Power BI dashboards, cutting managerial analysis time by 40%. Created web systems with LLMs (OpenAI/Claude) for intelligent process automation and data analysis. Automated 80% of manual routines with Python/Streamlit solutions. Led the SharePoint data migration, impacting 500+ users with 99.9% data integrity. Developed an advanced Power Apps application that increased productivity by 35%.",
       icon: "💼"
     },
     {
       company: "TECNOVOLT ENGENHARIA",
-      position: "Planejador Mecatrônico",
-      period: "Nov/2021 - Fev/2022", 
-      location: "Macaé, RJ - Cliente: Petrobras UN-BC",
-      description: "Automação industrial com programação Ladder. Monitoramento ZABBIX para alta disponibilidade de sistemas. ERP SAP PM para gestão eficiente de manutenção.",
+      position: "Mechatronics Planner",
+      period: "Nov 2021 - Feb 2022",
+      location: "Macaé, RJ - Client: Petrobras UN-BC",
+      description: "Industrial automation with Ladder programming. ZABBIX monitoring for high system availability. SAP PM ERP for efficient maintenance management.",
       icon: "📊"
     },
     {
       company: "COPAPA CIA PADUANA DE PAPÉIS",
-      position: "Técnico Eletricista de Manutenção",
-      period: "Nov/2018 - Nov/2021",
+      position: "Maintenance Electrical Technician",
+      period: "Nov 2018 - Nov 2021",
       location: "Santo Antônio de Pádua, RJ",
-      description: "Manutenção preventiva/corretiva de sistemas elétricos industriais. Diagnóstico avançado de falhas para redução de downtime operacional.",
+      description: "Preventive and corrective maintenance of industrial electrical systems. Advanced failure diagnosis to reduce operational downtime.",
       icon: "🏭"
     }
   ];
@@ -50,10 +76,10 @@ const Experience = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Minha <span className="text-blue-400">Experiência</span>
+            My <span className="text-blue-400">Experience</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Minha trajetória profissional, trabalhando em projetos desafiadores e impactantes.
+            My professional journey, working on challenging and impactful projects.
           </p>
         </motion.div>
 
@@ -91,6 +117,19 @@ const Experience = () => {
                   <h4 className="text-lg sm:text-xl text-gray-300 mb-6">{exp.company}</h4>
                 </div>
                 <p className="text-gray-300 leading-relaxed text-base sm:text-lg text-center">{exp.description}</p>
+
+                {exp.highlights && (
+                  <div className="flex flex-wrap gap-2 justify-center mt-8">
+                    {exp.highlights.map((highlight) => (
+                      <span
+                        key={highlight}
+                        className="text-xs font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/25 rounded-full px-3 py-1"
+                      >
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </Card>
 
               {/* Vertical line connecting experiences */}
