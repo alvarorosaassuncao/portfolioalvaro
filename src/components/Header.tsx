@@ -16,12 +16,12 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { href: '#home', label: 'Início' },
-    { href: '#about', label: 'Sobre' },
-    { href: '#experience', label: 'Experiência' },
-    { href: '#projects', label: 'Projetos' },
-    { href: '#skills', label: 'Competências' },
-    { href: '#contact', label: 'Contato' }
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#contact', label: 'Contact' }
   ];
 
   return (

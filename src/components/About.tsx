@@ -5,17 +5,17 @@ import { CheckCircle2 } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { number: "4", label: "Anos de Experiência" },
-    { number: "15+", label: "Dashboards Power BI" },
-    { number: "500+", label: "Usuários Impactados" },
-    { number: "80%", label: "Automação Alcançada" }
+    { number: "4", label: "Years of Experience" },
+    { number: "15+", label: "Power BI Dashboards" },
+    { number: "500+", label: "Users Impacted" },
+    { number: "80%", label: "Automation Achieved" }
   ];
 
   const skills = [
-    "Análise de Dados",
-    "Inteligência Artificial", 
-    "Automação de Processos",
-    "Desenvolvimento Web",
+    "Data Analysis",
+    "Artificial Intelligence",
+    "Process Automation",
+    "Web Development",
     "Machine Learning",
     "Power BI & Dashboards"
   ];
@@ -42,7 +42,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Sobre <span className="text-purple-400">Mim</span>
+            About <span className="text-purple-400">Me</span>
           </h2>
         </motion.div>
 
@@ -57,18 +57,18 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Sou <span className="text-blue-400 font-semibold">Engenheiro de Software e Full Stack Developer</span> especializado 
-                em IA, com foco em Análise de Dados, Automação e Desenvolvimento Web.
+                I am a <span className="text-blue-400 font-semibold">Process & Systems Engineer and Developer</span> with experience 
+                in AI, focused on Data Analysis, Automation and Web Development.
               </p>
               
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Com <span className="text-cyan-400 font-semibold">4 anos de experiência no setor de O&G (Petrobras)</span>, 
-                criei soluções inteligentes e inovadoras com LLMs e IA, transformando dados brutos em insights estratégicos.
+                With <span className="text-cyan-400 font-semibold">4 years of experience in the O&G sector (Petrobras)</span>, 
+                I built intelligent and innovative solutions with LLMs and AI, turning raw data into strategic insights.
               </p>
               
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Minha especialidade está em otimizar processos e reduzir custos operacionais através de 
-                automação inteligente e análise avançada de dados.
+                My strength lies in optimizing processes and reducing operational costs through 
+                intelligent automation and advanced data analysis.
               </p>
             </div>
 
@@ -108,7 +108,7 @@ const About = () => {
                 >
                   <span className="text-white">4</span>
                 </motion.div>
-                <p className="text-cyan-400 text-xl sm:text-2xl font-semibold">Anos de Experiência</p>
+                <p className="text-cyan-400 text-xl sm:text-2xl font-semibold">Years of Experience</p>
               </div>
               
               <div className="grid grid-cols-3 gap-6 sm:gap-8 text-center">

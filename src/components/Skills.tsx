@@ -43,11 +43,11 @@ const Skills = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 silver-title">
-            Minhas Habilidades
+            My Skills
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Combinação de habilidades técnicas em IA, análise de dados e desenvolvimento que me permitem criar 
-            soluções inteligentes e inovadoras para processos complexos.
+            A combination of technical skills in AI, data analysis and development that lets me build 
+            intelligent and innovative solutions for complex processes.
           </p>
         </motion.div>
 
@@ -62,7 +62,7 @@ const Skills = () => {
           >
             <div>
               <h3 className="text-xl font-semibold mb-8 text-center silver-title">
-                — Níveis de Proficiência —
+                — Proficiency Levels —
               </h3>
               {skillBars.slice(0, 6).map((skill, index) => (
                 <motion.div
@@ -92,7 +92,7 @@ const Skills = () => {
 
             <div>
               <h3 className="text-xl font-semibold mb-8 text-center silver-title">
-                — Níveis de Proficiência —
+                — Proficiency Levels —
               </h3>
               {skillBars.slice(6).map((skill, index) => (
                 <motion.div
@@ -131,7 +131,7 @@ const Skills = () => {
         >
           <div className="text-center mb-10">
             <h3 className="text-2xl font-semibold silver-title">
-              — Ferramentas & Tecnologias —
+              — Tools & Technologies —
             </h3>
           </div>
           
