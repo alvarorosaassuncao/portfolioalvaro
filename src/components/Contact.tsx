@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Create WhatsApp message
-    const whatsappMessage = `*Nova mensagem do site*\n\n*Nome:* ${formData.name}\n*Email:* ${formData.email}\n*Assunto:* ${formData.subject}\n\n*Mensagem:*\n${formData.message}`;
+    const whatsappMessage = `*New message from the website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n\n*Message:*\n${formData.message}`;
     
     // WhatsApp URL with Brazilian number format
     const whatsappUrl = `https://wa.me/5532999482095?text=${encodeURIComponent(whatsappMessage)}`;
@@ -31,8 +31,8 @@ const Contact = () => {
     
     // Show success toast
     toast({
-      title: "Mensagem enviada",
-      description: "Entrarei em contato em breve.",
+      title: "Message sent",
+      description: "I will get back to you soon.",
       duration: 5000,
     });
 
@@ -57,11 +57,11 @@ const Contact = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 silver-title-subtle">
-            Entre em <span className="text-primary">Contato</span>
+            Get in <span className="text-primary">Touch</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
-            Estou disponível para novas oportunidades. Entre em contato comigo para conversar
-            sobre análise de dados, projetos ou oportunidades de trabalho.
+            I am open to new opportunities. Reach out to talk about data analysis, 
+            reliability engineering, projects or job opportunities.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ const Contact = () => {
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 flex items-center justify-center">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary"></div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white">Informações de Contato</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-white">Contact Information</h3>
               </div>
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-center gap-3 sm:gap-4">
@@ -91,7 +91,7 @@ const Contact = () => {
                     <Phone className="text-gray-300" size={16} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-300 text-xs sm:text-sm">Telefone</h4>
+                    <h4 className="font-medium text-gray-300 text-xs sm:text-sm">Phone</h4>
                     <p className="text-white font-medium text-sm sm:text-base">(32) 99948-2095</p>
                   </div>
                 </div>
@@ -101,8 +101,8 @@ const Contact = () => {
                     <MapPin className="text-gray-300" size={16} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-300 text-xs sm:text-sm">Localização</h4>
-                    <p className="text-white font-medium text-sm sm:text-base">Minas Gerais</p>
+                    <h4 className="font-medium text-gray-300 text-xs sm:text-sm">Location</h4>
+                    <p className="text-white font-medium text-sm sm:text-base">Santos, SP, Brazil</p>
                   </div>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 flex items-center justify-center">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary"></div>
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-white">Redes Sociais</h3>
+                <h3 className="text-base sm:text-lg font-bold text-white">Social Networks</h3>
               </div>
               <div className="flex gap-3 sm:gap-4">
                 <a 
@@ -143,37 +143,37 @@ const Contact = () => {
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 flex items-center justify-center">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary"></div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white">Envie uma Mensagem</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-white">Send a Message</h3>
               </div>
               <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Seu Nome</label>
+                    <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Your Name</label>
                     <Input 
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       className="bg-gray-700 border-gray-600 focus:border-primary rounded-xl text-white placeholder:text-gray-500 text-sm sm:text-base"
-                      placeholder="João Silva"
+                      placeholder="John Doe"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Seu Email</label>
+                    <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Your Email</label>
                     <Input 
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       className="bg-gray-700 border-gray-600 focus:border-primary rounded-xl text-white placeholder:text-gray-500 text-sm sm:text-base"
-                      placeholder="joao@exemplo.com"
+                      placeholder="john@example.com"
                       required
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Assunto</label>
+                  <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Subject</label>
                   <select 
                     name="subject"
                     value={formData.subject}
@@ -181,22 +181,22 @@ const Contact = () => {
                     className="w-full bg-gray-700 border border-gray-600 rounded-xl px-3 py-2 text-white focus:border-primary focus:outline-none text-sm sm:text-base"
                     required
                   >
-                    <option value="">Selecione um assunto</option>
-                    <option value="Oportunidade de Trabalho">Oportunidade de Trabalho</option>
-                    <option value="Projeto">Projeto</option>
-                    <option value="Consultoria">Consultoria</option>
-                    <option value="Outros">Outros</option>
+                    <option value="">Select a subject</option>
+                    <option value="Job Opportunity">Job Opportunity</option>
+                    <option value="Project">Project</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 
                 <div>
-                  <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Mensagem</label>
+                  <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Message</label>
                   <Textarea 
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     className="bg-gray-700 border-gray-600 focus:border-primary min-h-[100px] sm:min-h-[120px] rounded-xl text-white placeholder:text-gray-500 text-sm sm:text-base"
-                    placeholder="Sua mensagem aqui..."
+                    placeholder="Your message here..."
                     required
                   />
                 </div>
@@ -206,7 +206,7 @@ const Contact = () => {
                   className="w-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white font-semibold py-2.5 sm:py-3 rounded-xl transition-all duration-300 text-sm sm:text-base"
                 >
                   <Send size={18} className="mr-2" />
-                  Enviar via WhatsApp
+                  Send via WhatsApp
                 </Button>
               </form>
             </Card>

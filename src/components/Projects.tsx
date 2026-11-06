@@ -8,31 +8,31 @@ import sharepointMigracaoImg from '@/assets/projects/sharepoint-migracao-powerbi
 
 const Projects = () => {
   const projects = [
-    // IA & Automação Projects
+    // AI & Automation Projects
     {
-      title: "PLATAFORMA WEB COM IA INTEGRADA",
-      subtitle: "INTELIGÊNCIA ARTIFICIAL",
-      description: "Sistema web com LLMs (OpenAI/Claude) para análise automatizada de documentos técnicos, processamento de linguagem natural e automação inteligente de processos.",
-      category: "IA & Automação",
+      title: "AI-INTEGRATED WEB PLATFORM",
+      subtitle: "ARTIFICIAL INTELLIGENCE",
+      description: "Web system with LLMs (OpenAI/Claude) for automated analysis of technical documents, natural language processing and intelligent process automation.",
+      category: "AI & Automation",
       image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["Python", "OpenAI", "Claude", "Streamlit"],
       githubUrl: "https://github.com/alvarorosaassuncao",
       featured: true
     },
     {
-      title: "AUTOMAÇÃO DE PROCESSOS - PETROBRAS",
-      subtitle: "AUTOMAÇÃO INTELIGENTE",
-      description: "Automatização de 80% das rotinas manuais usando Python e Streamlit, com integração SharePoint impactando +500 usuários.",
-      category: "IA & Automação", 
+      title: "PROCESS AUTOMATION - PETROBRAS",
+      subtitle: "INTELLIGENT AUTOMATION",
+      description: "Automated 80% of manual routines using Python and Streamlit, with SharePoint integration impacting 500+ users.",
+      category: "AI & Automation", 
       image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["Python", "Streamlit", "SharePoint", "Power Automate"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
     {
-      title: "APLICATIVO POWER APPS AVANÇADO",
-      subtitle: "DESENVOLVIMENTO LOW-CODE",
-      description: "Desenvolvimento de aplicativo no Power Apps que aumentou a produtividade em 35%, com integração completa ao ecossistema Microsoft.",
-      category: "IA & Automação",
+      title: "ADVANCED POWER APPS APPLICATION",
+      subtitle: "LOW-CODE DEVELOPMENT",
+      description: "Built a Power Apps application that increased productivity by 35%, fully integrated with the Microsoft ecosystem.",
+      category: "AI & Automation",
       image: "/lovable-uploads/d9c12a51-6a68-41e4-aa38-38c6370ed0b9.png",
       technologies: ["Power Apps", "Power Automate", "SharePoint", "SQL"],
       githubUrl: "https://github.com/alvarorosaassuncao"
@@ -41,56 +41,56 @@ const Projects = () => {
     // Dashboards & BI Projects
     {
       title: "DB-RH EMPRESA AI TI",
-      subtitle: "BANCO DE DADOS",
-      description: "DB-RH – Banco de dados para empresas de tecnologia da informação. Gerencie funcionários, projetos, clientes, contratos e tarefas de forma eficiente com uma estrutura organizada e otimizada para análise de dados.",
+      subtitle: "DATABASE",
+      description: "DB-RH – a database for information technology companies. Manage employees, projects, clients, contracts and tasks efficiently with an organized structure optimized for data analysis.",
       category: "Dashboards & BI",
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=200&fit=crop&crop=center",
       technologies: ["SQL Server", "Database Design", "Data Modeling", "Analytics"],
       githubUrl: "https://github.com/alvarorosaassuncao/DB-RH/tree/main"
     },
     {
-      title: "DASHBOARD EVOLUÇÃO DO PREÇO DA GASOLINA NO BRASIL",
+      title: "GASOLINE PRICE EVOLUTION DASHBOARD - BRAZIL",
       subtitle: "BUSINESS INTELLIGENCE",
-      description: "Dashboard interativo desenvolvido no Power BI para análise da evolução dos preços da gasolina no Brasil, com visualizações avançadas e insights sobre tendências de mercado.",
+      description: "Interactive Power BI dashboard analyzing the evolution of gasoline prices in Brazil, with advanced visualizations and insights on market trends.",
       category: "Dashboards & BI",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
       technologies: ["Power BI", "SQL Server", "DAX", "Excel"],
       githubUrl: "https://app.powerbi.com/view?r=eyJrIjoiYTc1ZDY2MGUtMmI5ZC00NzM0LWIzNGUtNGFmYjI1NzdmMjE1IiwidCI6IjA0NjU4YmI3LWJjYjAtNGY3My04Y2QwLTk5NzNmNDg3MWQwYiJ9"
     },
     {
-      title: "Dashboard Análise de Vendas",
-      subtitle: "INTEGRAÇÃO DE DADOS",
-      description: "Dashboard Power BI para monitorar a migração de dados do SharePoint com KPIs de volume migrado, integridade (99,9%), status por site e alertas em tempo real.",
+      title: "Sales Analysis Dashboard",
+      subtitle: "DATA INTEGRATION",
+      description: "Power BI dashboard to monitor SharePoint data migration with KPIs for migrated volume, integrity (99.9%), status per site and real-time alerts.",
       category: "Dashboards & BI",
       image: sharepointMigracaoImg,
       technologies: ["SharePoint", "SQL Server", "Power Automate", "Python"],
       githubUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjNkNjM5MzMtODQxMS00MjA1LThjNTgtMTMzYmRiNTJjMGI2IiwidCI6IjA0NjU4YmI3LWJjYjAtNGY3My04Y2QwLTk5NzNmNDg3MWQwYiJ9" 
     },
 
-    // Desenvolvimento Web Projects
+    // Web Development Projects
     {
-      title: "DETALIE - E-COMMERCE DE CESTAS GOURMET",
-      subtitle: "DESENVOLVIMENTO WEB",
-      description: "Plataforma e-commerce desenvolvida para venda de cestas de café da manhã artesanais, com sistema de pedidos online, catálogo interativo e interface moderna para proporcionar experiência premium aos clientes.",
-      category: "Desenvolvimento Web",
+      title: "DETALIE - GOURMET BASKET E-COMMERCE",
+      subtitle: "WEB DEVELOPMENT",
+      description: "E-commerce platform built to sell handcrafted breakfast baskets, with an online ordering system, interactive catalog and a modern interface that delivers a premium customer experience.",
+      category: "Web Development",
       image: "/lovable-uploads/40a7b098-4225-4d5f-85e0-a413e1455339.png",
       technologies: ["React", "JavaScript", "CSS3", "HTML5"],
       githubUrl: "https://detalie.netlify.app"
     },
     {
-      title: "REPORTA PIRAPETINGA - GESTÃO CIDADÃ",
-      subtitle: "SISTEMA WEB GOVERNAMENTAL",
-      description: "Sistema web desenvolvido para gerenciamento de denúncias e solicitações da população, permitindo que cidadãos reportem problemas urbanos e acompanhem o andamento das soluções pela prefeitura.",
-      category: "Desenvolvimento Web",
+      title: "REPORTA PIRAPETINGA - CITIZEN SERVICES",
+      subtitle: "GOVERNMENT WEB SYSTEM",
+      description: "Web system built to manage citizen reports and requests, allowing residents to report urban issues and follow the progress of solutions delivered by the city hall.",
+      category: "Web Development",
       image: "/lovable-uploads/7ebd36d5-fcc8-4c92-9f21-3ee206ef201c.png",
       technologies: ["React", "Node.js", "CSS3", "JavaScript"],
       githubUrl: "https://reporta-pirapetinga.netlify.app"
     },
     {
-      title: "AUTOMUSEU - LANDING PAGE CORPORATIVA",
-      subtitle: "LANDING PAGE EDUCACIONAL",
-      description: "Landing page otimizada para conversão, desenvolvida para promover serviços automotivos com design moderno e call-to-actions estratégicos.",
-      category: "Desenvolvimento Web",
+      title: "AUTOMUSEU - CORPORATE LANDING PAGE",
+      subtitle: "CONVERSION LANDING PAGE",
+      description: "Conversion-optimized landing page built to promote automotive services, with a modern design and strategic calls-to-action.",
+      category: "Web Development",
       image: "/lovable-uploads/5ae50db1-566f-4d9c-9aaa-ed2323476f21.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "https://landingpage-automuseu.netlify.app/"
@@ -98,27 +98,27 @@ const Projects = () => {
 
     // Web Scraping Projects
     {
-      title: "SISTEMA DE WEB SCRAPING AUTOMATIZADO",
-      subtitle: "AUTOMAÇÃO DE DADOS",
-      description: "Pipeline automatizado de extração de dados para Power BI com selenium e python, processando milhares de registros diariamente.",
+      title: "AUTOMATED WEB SCRAPING SYSTEM",
+      subtitle: "DATA AUTOMATION",
+      description: "Automated data extraction pipeline feeding Power BI, built with Selenium and Python, processing thousands of records daily.",
       category: "Web Scraping",
       image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Python", "Selenium", "BeautifulSoup", "Power BI"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
     {
-      title: "EXTRAÇÃO DE DADOS REGULATÓRIOS",
+      title: "REGULATORY DATA EXTRACTION",
       subtitle: "WEB SCRAPING",
-      description: "Sistema automatizado para extração de dados de órgãos reguladores, com processamento em tempo real e integração com dashboards.",
+      description: "Automated system to extract data from regulatory agencies, with real-time processing and dashboard integration.",
       category: "Web Scraping",
       image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Python", "Selenium", "Pandas", "SQL Server"],
       githubUrl: "https://github.com/alvarorosaassuncao"
     },
     {
-      title: "MONITORAMENTO DE DADOS EXTERNOS",
-      subtitle: "AUTOMAÇÃO & INTEGRAÇÃO",
-      description: "Sistema de monitoramento contínuo de fontes de dados externas com alertas automáticos e integração com sistemas internos.",
+      title: "EXTERNAL DATA MONITORING",
+      subtitle: "AUTOMATION & INTEGRATION",
+      description: "Continuous monitoring system for external data sources with automatic alerts and integration with internal systems.",
       category: "Web Scraping",
       image: "/lovable-uploads/dcd9e40e-69a2-4b4c-a648-9216c332d496.png",
       technologies: ["Python", "Requests", "MongoDB", "Docker"],
@@ -132,10 +132,10 @@ const Projects = () => {
         project.category === 'Dashboards & BI' || project.category === 'Web Scraping'
       );
     }
-    return projects.filter(project => project.category === 'Desenvolvimento Web');
+    return projects.filter(project => project.category === 'Web Development');
   };
 
-  // Componente para "Em Desenvolvimento"
+  // "Under Development" placeholder card
   const DevelopmentCard = () => (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -146,10 +146,10 @@ const Projects = () => {
     >
       <div className="bg-black border border-gray-600 rounded-2xl p-8 text-center">
         <h3 className="text-3xl font-bold silver-title">
-          Em Desenvolvimento
+          Under Development
         </h3>
         <p className="text-gray-400 mt-2">
-          Novos projetos de IA & Automação em breve
+          New AI & Automation projects coming soon
         </p>
       </div>
     </motion.div>
@@ -166,11 +166,11 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 silver-title">
-            Projetos Destacados
+            Featured Projects
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Alguns dos projetos mais impactantes que desenvolvi, demonstrando experiência em 
-            IA, automação, análise de dados e desenvolvimento de soluções inovadoras.
+            Some of the most impactful projects I have built, showing experience in 
+            AI, automation, data analysis and the development of innovative solutions.
           </p>
           <div className="mt-6">
             <a 
@@ -179,7 +179,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="modern-button text-white font-semibold py-3 px-8 inline-block hover:no-underline"
             >
-              Ver Todos no GitHub
+              View All on GitHub
             </a>
           </div>
         </motion.div>
@@ -198,13 +198,13 @@ const Projects = () => {
                 value="development" 
                 className="relative overflow-hidden data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 text-gray-300 hover:text-white transition-all duration-500 px-8 py-3 rounded-xl font-semibold tracking-wide hover:bg-blue-600/20 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:translate-x-[-200%] data-[state=active]:before:translate-x-[200%] before:transition-transform before:duration-1000"
               >
-                🚀 Desenvolvimento
+                🚀 Development
               </TabsTrigger>
               <TabsTrigger 
                 value="data-analysis" 
                 className="relative overflow-hidden data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg data-[state=active]:shadow-purple-500/50 text-gray-300 hover:text-white transition-all duration-500 px-8 py-3 rounded-xl font-semibold tracking-wide hover:bg-purple-600/20 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:translate-x-[-200%] data-[state=active]:before:translate-x-[200%] before:transition-transform before:duration-1000"
               >
-                📊 Análise de Dados
+                📊 Data Analysis
               </TabsTrigger>
             </TabsList>
           </motion.div>
@@ -277,7 +277,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="modern-button w-full text-white font-semibold py-3 px-6 text-center block hover:no-underline"
                       >
-                        Ver Site
+                        View Site
                       </a>
                     </div>
                   </Card>
@@ -354,7 +354,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="modern-button w-full text-white font-semibold py-3 px-6 text-center block hover:no-underline"
                       >
-                        Ver Detalhes
+                        View Details
                       </a>
                     </div>
                   </Card>
